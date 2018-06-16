@@ -16,3 +16,9 @@ def cross_entropy(Y, P):
         cross_entropy_list.append(Y[i] * y1P[i] + (1-Y[i]) * y0P[i])
 
     return -1.0 * sum(cross_entropy_list)
+
+### Alternative solution:
+#def cross_entropy(Y, P):
+#    Y = np.float_(Y)
+#    P = np.float_(P)
+#    return -np.sum(Y * np.log(P) + (1 - Y) * np.log(1 - P))
