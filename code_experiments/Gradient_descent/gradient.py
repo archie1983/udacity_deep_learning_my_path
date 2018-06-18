@@ -20,6 +20,18 @@ error = y - nn_output
 # TODO: Calculate the error term
 #       Remember, this requires the output gradient, which we haven't specifically added a variable for.
 error_term = error * sigmoid_prime(h)
+
+# Note: The sigmoid_prime function calculates sigmoid(h) twice,
+#       but you've already calculated it once. You can make this TODO: Calculate change in weights code more efficient by calculating the derivative 
+#       directlydel_w = learnrate * error_term * x print('Neural Network output:') print(nn_output) print('Amount of Error:') print(error) 
+#       print('Change in Weights:') rather than calling sigmoid_prime, like this:print(del_w)
+# error_term = error * nn_output * (1 - nn_output)
+
 # TODO: Calculate change in weights
-del_w = learnrate * error_term * x print('Neural Network output:') print(nn_output) print('Amount of Error:') print(error) print('Change in Weights:')
+del_w = learnrate * error_term * x
+print('Neural Network output:') 
+print(nn_output) 
+print('Amount of Error:') 
+print(error) 
+print('Change in Weights:')
 print(del_w)
