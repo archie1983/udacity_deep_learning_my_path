@@ -22,39 +22,41 @@ weights_input_hidden = np.random.normal(scale=1 / n_features ** .5,
                                         size=(n_features, n_hidden))
 weights_hidden_output = np.random.normal(scale=1 / n_features ** .5,
                                          size=n_hidden)
-
+#print ("n_features=",n_features," n_hidden=",n_hidden,weights_input_hidden)
 for e in range(epochs):
     del_w_input_hidden = np.zeros(weights_input_hidden.shape)
     del_w_hidden_output = np.zeros(weights_hidden_output.shape)
     for x, y in zip(features.values, targets):
         ## Forward pass ##
         # TODO: Calculate the output
-        hidden_input = None
-        hidden_output = None
-        output = None
+        hidden_input = np.dot(x, weights_input_hidden)
+        hidden_output = sigmoid(hidden_input)
+        output = sigmoid(np.dot(hidden_output, weights_hidden_output))
 
         ## Backward pass ##
         # TODO: Calculate the network's prediction error
-        error = None
+        error = y - output
 
         # TODO: Calculate error term for the output unit
-        output_error_term = None
+        output_error_term = error * output * (1 - output)
 
         ## propagate errors to hidden layer
 
         # TODO: Calculate the hidden layer's contribution to the error
-        hidden_error = None
+        hidden_error = np.dot(output_error_term, weights_hidden_output)
+        #hidden_error = weights_hidden_output * output_error_term
         
         # TODO: Calculate the error term for the hidden layer
-        hidden_error_term = None
+        hidden_error_term = hidden_error * hidden_output * (1 - hidden_output)
         
         # TODO: Update the change in weights
-        del_w_hidden_output += 0
-        del_w_input_hidden += 0
+        del_w_hidden_output += output_error_term * hidden_output
+        del_w_input_hidden += hidden_error_term * x[:,None]
 
     # TODO: Update weights
-    weights_input_hidden += 0
-    weights_hidden_output += 0
+    weights_input_hidden += learnrate * del_w_input_hidden / len(targets)
+    #print("weights_hidden_output = ",weights_hidden_output," del_w_input_hidden=",del_w_input_hidden)
+    weights_hidden_output += learnrate * del_w_hidden_output / len(targets)
 
     # Printing out the mean square error on the training set
     if e % (epochs / 10) == 0:
