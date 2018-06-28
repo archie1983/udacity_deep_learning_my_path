@@ -14,7 +14,8 @@ model = Sequential()
 
 # 1st Layer - Add an input layer of 32 nodes with the same input shape as
 # the training samples in X
-# Number of hidden nodes = 32, the input to those nodes is the column count of X inputs (so 2)
+# Number of hidden nodes = 32, the input to those nodes is the column 
+# count of X inputs (so 2)
 model.add(Dense(32, input_dim=X.shape[1]))
 
 # Add a softmax activation layer

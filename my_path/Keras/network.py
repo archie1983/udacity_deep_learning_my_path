@@ -22,7 +22,7 @@ xor = Sequential()
 # Add required layers
 # Set the first layer to a Dense() layer with an output width of 8 
 # nodes and the input_dim set to the size of the training samples (in this case 2).
-xor.add(Dense(8, input_dim=X.shape[1]))
+xor.add(Dense(25, input_dim=X.shape[1]))
 
 # Add a tanh activation function.
 xor.add(Activation('tanh'))
@@ -51,7 +51,7 @@ xor.summary()
 
 # Fitting the model
 # Run the model for 50 epochs.
-history = xor.fit(X, y, epochs=50, verbose=0)
+history = xor.fit(X, y, epochs=150, verbose=0)
 
 # Scoring the model
 score = xor.evaluate(X, y)
