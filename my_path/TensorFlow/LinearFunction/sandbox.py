@@ -47,7 +47,9 @@ train_features, train_labels = mnist_features_labels(n_labels)
 
 with tf.Session() as session:
     # TODO: Initialize session variables
-    
+    init = tf.global_variables_initializer()
+    session.run(init)
+
     # Softmax
     prediction = tf.nn.softmax(logits)
 
