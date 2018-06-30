@@ -8,11 +8,11 @@ def run():
     logits = tf.placeholder(tf.float32)
     
     # TODO: Calculate the softmax of the logits
-    # softmax =     
+    softmax = tf.nn.softmax(logit_data)
     
     with tf.Session() as sess:
         # TODO: Feed in the logit data
-        # output = sess.run(softmax,    )
+        output = sess.run(softmax, feed_dict={logits: logit_data})
 
     return output
 
