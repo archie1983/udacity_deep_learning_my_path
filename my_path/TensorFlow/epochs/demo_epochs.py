@@ -57,8 +57,8 @@ accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 init = tf.global_variables_initializer()
 
 batch_size = 128
-epochs = 10
-learn_rate = 0.001
+epochs = 80
+learn_rate = 0.01
 
 train_batches = batches(batch_size, train_features, train_labels)
 
