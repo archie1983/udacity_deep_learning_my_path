@@ -1,0 +1,2449 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# video: http://ogp.me/ns/video#">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<!-- Metadata -->
+	<title>The Dark Secret at the Heart of AI - MIT Technology Review</title>
+	<link rel="shortcut icon" href="/favicon.ico?v=2" type="image/x-icon">
+	<meta name="description" content="No one really knows how the most advanced algorithms do what they do. That could be a problem."><meta name="news_keywords" content="Artificial intelligence, machine learning, deep learning, algorithms">
+
+	<meta name="author" content="Will Knight"/>
+
+	<meta name="standout" content="https://www.technologyreview.com/s/604087/the-dark-secret-at-the-heart-of-ai/"/>
+
+	<!-- Open Graph -->
+	<meta property="og:url" content="https://www.technologyreview.com/s/604087/the-dark-secret-at-the-heart-of-ai/"><meta property="og:title" content="There’s a big problem with AI: even its creators can’t explain how it works"><meta property="og:type" content="article"><meta property="og:updated_time" content="2017-05-12T12:48:04-04:00"><meta property="og:image" content="https://cdn.technologyreview.com/i/images/mj17-aiblackbox1.jpg?cx=0&cy=392&cw=1563&ch=879&sw=1200">
+	<meta property="og:image:url" content="https://cdn.technologyreview.com/i/images/mj17-aiblackbox1.jpg?cx=0&cy=392&cw=1563&ch=879&sw=1200">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta property="og:image:width" content="1563">
+	<meta property="og:image:height" content="2000">
+	<meta property="og:description" content="No one really knows how the most advanced algorithms do what they do. That could be a problem."><meta property="og:site_name" content="MIT Technology Review">
+
+	<!-- Twitter -->
+	
+		<meta name="twitter:card" content="summary_large_image">
+		
+		<meta name="twitter:site" content="@techreview">
+		
+		<meta name="twitter:description" content="No one really knows how the most advanced algorithms do what they do. That could be a problem.">
+		
+		<meta name="twitter:title" content="There’s a big problem with AI: even its creators can’t explain how it works">
+		
+		<meta name="twitter:image" content="https://www.technologyreview.com/i/images/mj17-aiblackbox1.jpg?sw=560&cx=0&cy=392&cw=1563&ch=879">
+		
+
+	<!-- Schema.org -->
+	<script type="application/ld+json" id="NewsArticle">{"@context":"http://schema.org","@type":"NewsArticle","headline":"The Dark Secret at the Heart of AI","description":"No one really knows how the most advanced algorithms do what they do. That could be a problem.","url":"https://www.technologyreview.com/s/604087/the-dark-secret-at-the-heart-of-ai/","dateCreated":"2017-04-11T00:00:00-04:00","datePublished":"2017-04-11T00:00:00-04:00","dateModified":"2017-05-12T12:48:04-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"/s/604087/the-dark-secret-at-the-heart-of-ai/"},"creator":"Will Knight","author":{"@type":"Person","name":"Will Knight"},"publisher":{"@type":"Organization","name":"MIT Technology Review","logo":{"@type":"ImageObject","url":"https://cdn.technologyreview.com/_/img/stacked-logo-v2.svg","width":184,"height":90}},"keywords":["artificial intelligence","AI","machine learning","deep learning","algorithms"],"thumbnailUrl":"https://cdn.technologyreview.com/i/images/mj17-aiblackbox1.jpg?sw=1563","image":{"@type":"ImageObject","url":"https://cdn.technologyreview.com/i/images/mj17-aiblackbox1.jpg?sw=1563","height":1563,"width":2000},"articleSection":"Intelligent Machines"}</script><script type="application/ld+json" id="Organization">{"@context":"schema.org","@type":"Organization","name":"MIT Technology Review","address":{"@type":"PostalAddress","addressLocality":"Cambridge, MA, USA","postalCode":"02142","streetAddress":"1 Main Street"}}</script><script type="application/ld+json" id="searchBox">{"@context":"http://schema.org","@type":"WebSite","url":"https://www.technologyreview.com","potentialAction":{"@type":"SearchAction","target":"https://www.technologyreview.com/search/?s={s}","query-input":"required name=s"}}</script><script type="application/ld+json" id="searchBreadcrumbs">{"@context":"http://schema.org","@type":"WebSite","name":"MIT Technology Review","alternateName":"Technologyreview.com","url":"https://www.technologyreview.com"}</script>
+
+	
+	<link rel="canonical" href="https://www.technologyreview.com/s/604087/the-dark-secret-at-the-heart-of-ai/">
+	
+
+	
+	<link rel="amphtml" href="https://www.technologyreview.com/s/604087/the-dark-secret-at-the-heart-of-ai/amp/">
+	
+
+	
+
+	<!-- Google Sign-in -->
+	<meta name="google-signin-client_id" content="420520515534.apps.googleusercontent.com">
+
+	<!-- Facebook Instant Articles -->
+	<meta property="fb:pages" content="17043549797" />
+
+	
+<link rel="stylesheet" href="https://cdn.technologyreview.com/_/dist/css/article.css?v=e2224133">
+
+
+	<!-- Stylesheets -->
+	
+
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.0.5/es5-shim.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<![endif]-->
+
+	<!-- Google Tag Manager Data Layer-->
+	
+	<script>
+	dataLayer = [{"Contributor":"Will Knight","PageType":"Featured Story","Pubdate":"2017-04-11","WordCount":"03200","DelayPageview":"true","EntryID":604087,"Topic":"Intelligent Machines","ABTestVariant":"topper"}];
+	</script>
+	
+
+	
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-TRBQMN');</script>
+	<!-- More GTM-related stuff (for Optimize) -->
+	<style>.async-hide { opacity: 0 !important} </style>
+	<script>
+	(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+	h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+	(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+	})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-TRBQMN':true});
+	</script>
+	
+
+	
+	</head>
+<body class=""
+	data-model="master"
+	rv-class-js-mobile-nav-is-open="mobileNav.open"
+	rv-class-js-mobile-nav-is-fixed="mobileNav.fixed"
+	rv-class-js-nav-is-open="nav.open"
+	rv-class-js-nav-is-fixed="nav.fixed"
+	rv-class-js-search-is-open="search.open"
+
+	
+	>
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TRBQMN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+
+	
+		
+<div id="fullpage-interstitial-overlay">
+	<div id="fullpage-interstitial-container">
+		<div id="subscriber-roadblock" class="adunit"
+			data-adunit="__subscriber/__roadblock"
+			data-size-mapping="subscriber-roadblock"
+			data-active="false">
+		</div>
+	</div>
+</div>
+
+	
+
+	
+	<section class="incognito-wall">
+	<div class="incognito-wall__wrapper">
+		<a href="/"><img class="incognito-wall__logo" src="https://cdn.technologyreview.com/_/img/stacked-logo-v2.svg" alt="MIT Technology Review"></a>
+		<div class="incognito-wall__intro">
+			<p>Hello,</p>
+			<p>We noticed you're browsing in private or incognito mode.</p>
+		</div>
+		<div class="incognito-wall__body">
+			<p>To continue reading this article, please exit incognito mode
+				or <a href="/login/?redirectTo=%2Fs%2F604087%2Fthe-dark-secret-at-the-heart-of-ai%2F">log in</a>.</p>
+			<p>Not an Insider? Subscribe now for unlimited access to online articles.</p>
+			<a href="/insider/pricing/" class="btn btn--primary--transparent incognito-wall__subscribe-btn">
+				<span class="txt">Subscribe today</span>
+				<span class="btn--primary--transparent__icon">
+<svg class="btn__icon--angle-arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.1 10.1" enable-background="new 0 0 10.1 10.1" xml:space="preserve">
+	<polygon fill="#FFFFFF" points="0.9,0 0.9,2.5 5.9,2.5 0,8.4 1.8,10.1 7.6,4.3 7.6,9.2 10.1,9.2 10.1,0 "/>
+</svg>
+</span>
+			</a>
+		</div>
+		<div class="incognito-wall__footer">
+			<h4>Why we made this change</h4>
+			<p>Visitors are allowed 3 free articles per month (without a subscription), and private browsing prevents us from counting how many stories you've read. We hope you understand, and consider <a href="/insider/pricing/">subscribing</a> for unlimited online access.</p>
+			<div><a href="/">Back to MIT Technology Review home</a></div>
+			<div><a href="/help/contact/">Contact customer service</a> if you are seeing this message in error.</div>
+		</div>
+	</div>
+</section>
+
+	
+
+	
+
+	
+		<!-- Site Header / Nav -->
+		
+	
+
+<header id="header" role="banner">
+	<nav class="navbar">
+		<div class="navbar__width">
+			<a class="navbar__logo-mod" href="/">
+				<img class="navbar__logo" src="https://cdn.technologyreview.com/_/img/stacked-logo-v2.svg" alt="MIT Technology Review">
+			</a><!-- header-logo -->
+
+			
+				<button class="navbar__mobile-menu" data-mobile-menu="toggle">Menu</button>
+			
+
+			
+			
+
+			<div class="navbar__navigation">
+				<ul class="navbar--primary">
+
+					
+
+					<li class="navbar__item--primary navbar__item--expandable navbar__item--primary--topics">
+						<span class="navbar__item__link navbar__item__link--primary navbar__item__link--expandable">Topics<span class="navbar__item__link--expandable__plus"></span></span>
+						<ul class="navbar__dropdown">
+							<li class="navbar__topics__section-container">
+								<ul class="navbar__topics__section--topics">
+									<li class="navbar__dropdown__item"><a class="navbar__dropdown__item-link" href="/topic/business-impact/">Business Impact</a></li>
+									<li class="navbar__dropdown__item"><a class="navbar__dropdown__item-link" href="/topic/connectivity/">Connectivity</a></li>
+									<li class="navbar__dropdown__item"><a class="navbar__dropdown__item-link" href="/topic/intelligent-machines/">Intelligent Machines</a></li>
+									<li class="navbar__dropdown__item"><a class="navbar__dropdown__item-link" href="/topic/rewriting-life/">Rewriting Life</a></li>
+									<li class="navbar__dropdown__item"><a class="navbar__dropdown__item-link" href="/topic/sustainable-energy/">Sustainable Energy</a></li>
+								</ul>
+							</li>
+							<li class="navbar__topics__section-container">
+								<ul class="navbar__topics__section--lists">
+									<li class="navbar__dropdown__item"><a class="navbar__dropdown__item-link" href="/lists/technologies/">10 Breakthrough Technologies</a></li>
+									<li class="navbar__dropdown__item"><a class="navbar__dropdown__item-link" href="/lists/innovators-under-35/">35 Innovators Under 35</a></li>
+									<li class="navbar__dropdown__item"><a class="navbar__dropdown__item-link" href="/lists/companies/">50 Smartest Companies</a></li>
+								</ul>
+							</li>
+							<li class="navbar__dropdown__item"><a class="navbar__dropdown__item-link" href="/views/">Views</a></li>
+							<li class="navbar__dropdown__item"><a class="navbar__dropdown__item-link" href="/views-from-the-marketplace/">Views from the Marketplace</a></li>
+							<li class="navbar__dropdown__item"><a class="navbar__dropdown__item-link" href="http://bit.ly/2Gcx4ln">On-Device AI, Sponsored by Qualcomm</a></li>
+						</ul>
+					</li>
+
+					<li class="navbar__item--primary"><a class="navbar__item__link navbar__item__link--primary" href="/the-download/">The Download</a></li>
+					<li class="navbar__item--primary"><a class="navbar__item__link navbar__item__link--primary" href="/magazine/">Magazine</a></li>
+					<li class="navbar__item--primary"><a class="navbar__item__link navbar__item__link--primary" href="https://events.technologyreview.com/">Events</a></li>
+
+					<li class="navbar__item--primary navbar__item--expandable navbar__item--primary--more">
+						<span class="navbar__item__link navbar__item__link--primary navbar__item__link--expandable">More<span class="navbar__item__link--expandable__plus"></span></span>
+						<ul class="navbar__dropdown">
+							<li class="navbar__dropdown__item"><a class="navbar__dropdown__item-link" href="/videos/">Video</a></li>
+							<li class="navbar__dropdown__item"><a class="navbar__dropdown__item-link" href="/magazine/special-publications/">Special Publications</a></li>
+							<li class="navbar__dropdown__item"><a class="navbar__dropdown__item-link" href="/mit-news/">MIT News Magazine</a></li>
+							<li class="navbar__dropdown__item"><a class="navbar__dropdown__item-link" href="/newsletters/">Newsletters</a></li>
+							<li class="navbar__dropdown__item"><a class="navbar__dropdown__item-link" href="/help/">Help/Support</a></li>
+							<li class="navbar__dropdown__item"><a class="navbar__dropdown__item-link" href="https://mediakit.technologyreview.com/">Advertise with Us</a></li>
+						</ul>
+					</li>
+
+					<!-- Redundent account menu implementation for devices -->
+					
+					<li class="navbar__item--primary navbar__item--primary--account navbar__item--phone">
+						<a href="/login/?redirectTo=%2Fs%2F604087%2Fthe-dark-secret-at-the-heart-of-ai%2F" class="navbar__item__link navbar__item__link--primary" rel="nofollow">Log in / Create and account</a>
+					</li>
+					
+				</ul><!-- primary nav -->
+
+				
+				<ul class="navbar--tertiary">
+					
+					<li class="navbar__item--tertiary navbar__item--tertiary--subscribe"><a href="/subscribe/" class="navbar__item__link navbar__item__link--tertiary btn btn--primary">
+						<span class="txt">Subscribe</span>
+						<span class="btn--primary__icon"></span>
+					</a></li>
+					
+				</ul><!-- tertiary nav -->
+				
+
+				<!-- Secondary Navbar -->
+				<ul class="navbar--secondary">
+					
+					<li class="navbar__item--secondary navbar__item--secondary--login"><a href="/login/?redirectTo=%2Fs%2F604087%2Fthe-dark-secret-at-the-heart-of-ai%2F" class="navbar__item__link navbar__item__link--secondary" rel="nofollow">Log in</a> / <a href="/login/?redirectTo=%2Fs%2F604087%2Fthe-dark-secret-at-the-heart-of-ai%2F" class="navbar__item__link navbar__item__link--secondary" rel="nofollow">Create an account</a></li>
+					
+					<a data-toggle="search-form" rv-unless="entries.searchpage">
+						<li class="navbar__item--secondary navbar__item--search dropdown-nav__item">
+								<span class="navbar__desktop-search--text"><span rv-text="search.menuLabel">Search</span><i class="search-icon"></i></span>
+						</li>
+					</a>
+				</ul><!-- secondary nav -->
+				<ul class="navbar--search">
+					<li class="navbar__item--search">
+						<form id="search-form" class="navbar__mobile-search" action="/search/">
+							<a class="navbar__mobile-search__close" data-search="close"></a>
+							<input class="navbar__mobile-search__input" data-search="search-terms" type="text" name="s" autocomplete="off" placeholder="Search" rv-value="entries.params.query">
+							<input class="navbar__mobile-search__button" data-search="submit" type="submit" value="">
+							<p class="query-notice" rv-show="entries.loading" rv-if="entries"><span>Click search or press enter</span></p>
+						</form>
+					</li>
+				</ul>
+			</div><!-- header-navbar -->
+		</div>
+	</nav><!-- .navbar -->
+</header>
+
+		<!-- Leaderboard -->
+		<div class="adunit ad--leaderboard"
+	data-adunit="__site/__leaderboard"
+	data-size-mapping="leaderboard"
+	data-active="false">
+</div>
+	
+
+
+
+	<!-- Ribbon -->
+	
+
+	
+
+	<!-- Main -->
+	<main class="site-content" role="main">
+		<section data-entry-parent>
+			<article data-entry-id="604087" data-type="article" class="article ">
+				<div class="article-body">
+					
+
+	<!-- Article Topper: Horizontal -->
+<div class="l-article-topper l-article-topper--horizontal" data-topper-layout="horizontal" data-topper-type="standard">
+
+	<div class="article-topper__media-wrap">
+		
+
+
+<picture
+	class="article-topper__image "
+	
+	data-iesrc="https://cdn.technologyreview.com/i/images/mj17-aiblackbox1.jpg?sw=1180&amp;cx=0&amp;cy=351&amp;cw=1563&amp;ch=1207"
+	
+>
+			
+				<source
+					media="(min-width: 1024px)"
+					srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox1.jpg?sw=1180&amp;cx=0&amp;cy=351&amp;cw=1563&amp;ch=1207 1x,https://cdn.technologyreview.com/i/images/mj17-aiblackbox1.jpg?sw=2360&amp;cx=0&amp;cy=351&amp;cw=1563&amp;ch=1207 2x"
+				>
+			
+		
+			
+				<source
+					media="(min-width: 850px)"
+					srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox1.jpg?sw=1024&amp;cx=0&amp;cy=351&amp;cw=1563&amp;ch=1207 1x,https://cdn.technologyreview.com/i/images/mj17-aiblackbox1.jpg?sw=2048&amp;cx=0&amp;cy=351&amp;cw=1563&amp;ch=1207 2x"
+				>
+			
+		
+			
+				<source
+					media="(min-width: 550px)"
+					srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox1.jpg?sw=850&amp;cx=0&amp;cy=351&amp;cw=1563&amp;ch=1207 1x,https://cdn.technologyreview.com/i/images/mj17-aiblackbox1.jpg?sw=1700&amp;cx=0&amp;cy=351&amp;cw=1563&amp;ch=1207 2x"
+				>
+			
+				<source
+					media="(min-width: 401px)"
+					srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox1.jpg?sw=550&amp;cx=0&amp;cy=351&amp;cw=1563&amp;ch=1207 1x,https://cdn.technologyreview.com/i/images/mj17-aiblackbox1.jpg?sw=1100&amp;cx=0&amp;cy=351&amp;cw=1563&amp;ch=1207 2x"
+				>
+			
+		
+			
+				<source
+					media="(min-width: 0px)"
+					srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox1.jpg?sw=401&amp;cx=0&amp;cy=351&amp;cw=1563&amp;ch=1207 1x,https://cdn.technologyreview.com/i/images/mj17-aiblackbox1.jpg?sw=802&amp;cx=0&amp;cy=351&amp;cw=1563&amp;ch=1207 2x"
+				>
+			
+		
+
+		
+			<img
+				class="article-topper__image"
+				src="https://cdn.technologyreview.com/i/images/mj17-aiblackbox1.jpg?sw=1180&amp;cx=0&amp;cy=351&amp;cw=1563&amp;ch=1207"
+				srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox1.jpg?sw=1180&amp;cx=0&amp;cy=351&amp;cw=1563&amp;ch=1207 1x,https://cdn.technologyreview.com/i/images/mj17-aiblackbox1.jpg?sw=2360&amp;cx=0&amp;cy=351&amp;cw=1563&amp;ch=1207 2x"
+				
+			>
+			<div class="article-enlarge"></div></picture>
+
+
+		
+
+		
+		<li class="article-topper__horizontal--illustration">Keith Rankin</li>
+		
+
+	</div>
+
+	
+	<div class="article-social-list article-social-list--topper">
+	
+<ul class="social-list addthis_toolbox" data-share-id="604087" addthis:url="https://www.technologyreview.com/s/604087/the-dark-secret-at-the-heart-of-ai/" addthis:title="There’s a big problem with AI: even its creators can’t explain how it works"><li class="disqus-container social-list__item">
+		<a href="#disqus_thread" class="scroll-to-comments social-list__comment-link">
+			<div class="disqus-comment-count" data-disqus-identifier="nid_604087"></div>
+		</a>
+	</li><li class="social-list__item">
+		<a href="#" class="social-list__link addthis_button_facebook" data-event-category="addthis-custom" data-event-action="click" data-event-label="facebook"><i class="ion-social-facebook"></i></a>
+	</li>
+	<li class="social-list__item">
+		<a href="#" class="social-list__link addthis_button_twitter" data-event-category="addthis-custom" data-event-action="click" data-event-label="twitter"><i class="ion-social-twitter"></i></a>
+	</li>
+	<li class="social-list__item">
+		<a href="#" class="social-list__link addthis_button_reddit" data-event-category="addthis-custom" data-event-action="click" data-event-label="reddit"><i class="ion-social-reddit"></i></a>
+	</li>
+	<li class="social-list__item">
+		<a href="#" class="social-list__link addthis_button_linkedin" data-event-category="addthis-custom" data-event-action="click" data-event-label="linkedin"><i class="ion-social-linkedin"></i></a>
+	</li>
+	<li class="social-list__item">
+		<a href="#" class="social-list__link addthis_button_whatsapp" data-event-category="addthis-custom" data-event-action="click" data-event-label="whatsapp"><i class="ion-social-whatsapp"></i></a>
+	</li>
+	<li class="social-list__item">
+		<a href="#" class="social-list__link addthis_button_email" data-event-category="addthis-custom" data-event-action="click" data-event-label="email"><i class="ion-ios-email"></i></a>
+	</li>
+	
+</ul>
+
+
+	</div>
+	
+
+	<div class="article-topper__header-wrap">
+
+		<div class="article-topper__hgroup">
+
+			<div class="article-topper__hgroup--top">
+				
+					
+
+  
+    <h3 class="article-topper__topic">
+      
+      <a href="/topic/intelligent-machines/" class="entry__term">Intelligent Machines</a>
+      
+
+      
+
+    </h3>
+  
+
+
+
+				
+
+				<h1 class="article-topper__title">The Dark Secret at the Heart of AI</h1>
+
+			</div>
+
+			<div class="article-topper__hgroup--bottom">
+
+				
+				<h2 class="article-topper__subtitle">No one really knows how the most advanced algorithms do what they do. That could be a problem.</h2>
+				
+
+				
+				<ul class="article-topper__meta-info">
+				
+
+					
+					<li class="article-topper__meta-item">
+						by <!-- Article Topper: Byline -->
+
+	
+		<a href="/profile/will-knight/">Will Knight</a>
+	
+
+
+					</li>
+					
+
+					
+					<li class="article-topper__meta-item">April 11, 2017</li>
+					
+
+				</ul>
+
+				
+
+			</div>
+
+		</div>
+
+		
+
+		<div class="article-social-list article-social-list--mobile">
+		
+<ul class="social-list addthis_toolbox" data-share-id="604087" addthis:url="https://www.technologyreview.com/s/604087/the-dark-secret-at-the-heart-of-ai/" addthis:title="There’s a big problem with AI: even its creators can’t explain how it works"><li class="disqus-container social-list__item">
+		<a href="#disqus_thread" class="scroll-to-comments social-list__comment-link">
+			<div class="disqus-comment-count" data-disqus-identifier="nid_604087"></div>
+		</a>
+	</li><li class="social-list__item">
+		<a href="#" class="social-list__link addthis_button_facebook" data-event-category="addthis-custom" data-event-action="click" data-event-label="facebook"><i class="ion-social-facebook"></i></a>
+	</li>
+	<li class="social-list__item">
+		<a href="#" class="social-list__link addthis_button_twitter" data-event-category="addthis-custom" data-event-action="click" data-event-label="twitter"><i class="ion-social-twitter"></i></a>
+	</li>
+	<li class="social-list__item">
+		<a href="#" class="social-list__link addthis_button_reddit" data-event-category="addthis-custom" data-event-action="click" data-event-label="reddit"><i class="ion-social-reddit"></i></a>
+	</li>
+	<li class="social-list__item">
+		<a href="#" class="social-list__link addthis_button_linkedin" data-event-category="addthis-custom" data-event-action="click" data-event-label="linkedin"><i class="ion-social-linkedin"></i></a>
+	</li>
+	<li class="social-list__item">
+		<a href="#" class="social-list__link addthis_button_whatsapp" data-event-category="addthis-custom" data-event-action="click" data-event-label="whatsapp"><i class="ion-social-whatsapp"></i></a>
+	</li>
+	<li class="social-list__item">
+		<a href="#" class="social-list__link addthis_button_email" data-event-category="addthis-custom" data-event-action="click" data-event-label="email"><i class="ion-ios-email"></i></a>
+	</li>
+	
+</ul>
+
+
+		</div>
+
+	</div>
+
+	<div class="adunit ad--right-rail"
+	data-adunit="__site/__square-rectangle"
+	data-size-mapping="square--desktop"
+	data-active="false">
+</div>
+
+</div>
+
+
+
+	
+
+<div class="article-body__content">
+
+	
+
+		<p>L<span class="s1">ast year, a strange self-driving car was released onto the quiet roads of Monmouth County, New Jersey. The experimental vehicle, developed by researchers at the chip maker Nvidia, didn’t look different from other autonomous cars, but it was unlike anything demonstrated by Google, Tesla, or General Motors, and it showed the rising power of artificial intelligence. The car didn’t follow a single instruction provided by an engineer or programmer. Instead, it relied entirely on an algorithm that had taught itself to drive by watching a human do it.</span></p>
+
+		<p>Getting a car to drive this way was an impressive feat. But it’s also a bit unsettling, since it isn’t completely clear how the car makes its decisions. Information from the vehicle’s sensors goes straight into a huge network of artificial neurons that process the data and then deliver the commands required to operate the steering wheel, the brakes, and other systems. The result seems to match the responses you’d expect from a human driver. But what if one day it did something unexpected—crashed into a tree, or sat at a green light? As things stand now, it might be difficult to find out why. The system is so complicated that even the engineers who designed it may struggle to isolate the reason for any single action. And you can’t ask it: there is no obvious way to design such a system so that it could always explain why it did what it did.</p><div class="adunit ad--square-only ad--article-body"
+	data-adunit="__site/__square-rectangle"
+	data-size-mapping="square-rectangle--mobile"
+	data-active="false">
+</div>
+			
+		
+
+		<p>The mysterious mind of this vehicle points to a looming issue with artificial intelligence<em>. </em>The car’s underlying AI technology, known as deep learning, has proved very powerful at solving problems in recent years, and it has been widely deployed for tasks like image captioning, voice recognition, and language translation. There is now hope that the same techniques will be able to diagnose deadly diseases, make million-dollar trading decisions, and do countless other things to transform whole industries.</p>
+
+		
+
+
+
+
+
+<figure class="l-magazine-promo"
+	data-widget-type="imageset"
+	data-widget-layout="magazine-promo">
+
+	<a class="magazine-promo-picture" href="/magazine/2017/05/">
+
+	
+
+
+<picture
+	class="magazine-promo "
+	
+><img
+			class="magazine-promo "
+			src="https://cdn.technologyreview.com/i/images/mj17coverhires.jpg?sw=180"
+			srcset="https://cdn.technologyreview.com/i/images/mj17coverhires.jpg?sw=180 1x,https://cdn.technologyreview.com/i/images/mj17coverhires.jpg?sw=360 2x"></picture>
+
+
+	</a>
+	<figcaption class="magazine-promo magazine-promo-cap">
+		
+		<div class="magazine-promo-cap__heading">This story is part of our May/June 2017 Issue</div>
+		
+		<div class="magazine-promo-cap__bar"></div>
+		<a href="/magazine/2017/05/" class="magazine-promo-cap__cta">See the rest of the issue</a><br />
+		
+			<a href="/subscribe/" class="magazine-promo-cap__cta">Subscribe</a>
+		
+	</figcaption>
+</figure>
+<p>But this won’t happen—or shouldn’t happen—unless we find ways of making techniques like deep learning more understandable to their creators and accountable to their users. Otherwise it will be hard to predict when failures might occur—and it’s inevitable they will. That’s one reason Nvidia’s car is still experimental.</p>
+
+		<p>Already, mathematical models are being used to help determine who makes parole, who’s approved for a loan, and who gets hired for a job. If you could get access to these mathematical models, it would be possible to understand their reasoning. But banks, the military, employers, and others are now turning their attention to more complex machine-learning approaches that could make automated decision-making altogether inscrutable. Deep learning, the most common of these approaches, represents a fundamentally different way to program computers. “It is a problem that is already relevant, and it’s going to be much more relevant in the future,” says Tommi Jaakkola, a professor at MIT who works on applications of machine learning. “Whether it’s an investment decision, a medical decision, or maybe a military decision, you don’t want to just rely on a ‘black box’ method.”</p>
+
+		<p>There’s already an argument that being able to interrogate an AI system about how it reached its conclusions is a fundamental legal right. Starting in the summer of 2018, the European Union may require that companies be able to give users an explanation for decisions that automated systems reach. This might be impossible, even for systems that seem relatively simple on the surface, such as the apps and websites that use deep learning to serve ads or recommend songs. The computers that run those services have programmed themselves, and they have done it in ways we cannot understand. Even the engineers who build these apps cannot fully explain their behavior.</p>
+
+		<p>This raises mind-boggling questions. As the technology advances, we might soon cross some threshold beyond which using AI requires a leap of faith. Sure, we humans can’t always truly explain our thought processes either—but we find ways to intuitively trust and gauge people. Will that also be possible with machines that think and make decisions differently from the way a human would? We’ve never before built machines that operate in ways their creators don’t understand. How well can we expect to communicate—and get along with—intelligent machines that could be unpredictable and inscrutable? These questions took me on a journey to the bleeding edge of research on AI algorithms, from Google to Apple and many places in between, including a meeting with one of the great philosophers of our time.&nbsp;</p>
+
+		
+
+
+	
+
+
+<figure class="l-article-img l-article-img--8col"
+	data-widget-type="imageset"
+	data-widget-layout="8col">
+
+	
+
+	
+		
+
+		
+			
+
+
+<picture
+	class="article-img article-img--8col "
+	
+	data-iesrc="https://cdn.technologyreview.com/i/images/mj17-aiblackbox2.jpg?sw=1080&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999"
+	
+>
+			
+				<source
+					media="(min-width: 1024px)"
+					srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox2.jpg?sw=1080&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999 1x,https://cdn.technologyreview.com/i/images/mj17-aiblackbox2.jpg?sw=2160&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999 2x"
+				>
+			
+		
+			
+				<source
+					media="(min-width: 850px)"
+					srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox2.jpg?sw=1024&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999 1x,https://cdn.technologyreview.com/i/images/mj17-aiblackbox2.jpg?sw=2048&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999 2x"
+				>
+			
+		
+			
+				<source
+					media="(min-width: 550px)"
+					srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox2.jpg?sw=850&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999 1x,https://cdn.technologyreview.com/i/images/mj17-aiblackbox2.jpg?sw=1700&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999 2x"
+				>
+			
+				<source
+					media="(min-width: 401px)"
+					srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox2.jpg?sw=550&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999 1x,https://cdn.technologyreview.com/i/images/mj17-aiblackbox2.jpg?sw=1100&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999 2x"
+				>
+			
+		
+			
+				<source
+					media="(min-width: 0px)"
+					srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox2.jpg?sw=401&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999 1x,https://cdn.technologyreview.com/i/images/mj17-aiblackbox2.jpg?sw=802&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999 2x"
+				>
+			
+		
+
+		
+			<img
+				class="article-img article-img--8col"
+				src="https://cdn.technologyreview.com/i/images/mj17-aiblackbox2.jpg?sw=1080&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999"
+				srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox2.jpg?sw=1080&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999 1x,https://cdn.technologyreview.com/i/images/mj17-aiblackbox2.jpg?sw=2160&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999 2x"
+				
+			>
+			<div class="article-enlarge"></div></picture>
+
+		
+
+		
+
+	
+
+	
+		<figcaption class="article-cap article-cap--8col">
+			
+			The artist Adam Ferriss created this image, and the one below, using Google Deep Dream, a program that adjusts an image to stimulate the pattern recognition capabilities of a deep neural network. The pictures were produced using a mid-level layer of the neural network.
+			
+			
+			<div class="article-illustration">Adam Ferriss</div>
+			
+		</figcaption>
+		
+</figure>
+
+
+		<p>In 2015, a research group at Mount Sinai Hospital in New York was inspired to apply deep learning to the hospital’s vast database of patient records. This data set features hundreds of variables on patients, drawn from their test results, doctor visits, and so on. The resulting program, which the researchers named Deep Patient, was trained using data from about 700,000 individuals, and when tested on new records, it proved incredibly good at predicting disease. Without any expert instruction, Deep Patient had discovered patterns hidden in the hospital data that seemed to indicate when people were on the way to a wide range of ailments, including cancer of the liver. There are a lot of methods that are “pretty good” at predicting disease from a patient’s records, says Joel Dudley, who leads the Mount Sinai team. But, he adds, “this was just way better.”</p>
+
+		<aside class="l-pullquote--3col
+				 pullquote-style--default
+				 pullquote-size--large" 
+		data-widget-type="quote" 
+		data-widget-layout="3col">
+
+	<p class="pullquote__text pullquote__text--quote">“We can build these models, but we don’t know how they work.”</p>
+	
+</aside>
+
+
+		<p>At the same time, Deep Patient is a bit puzzling. It appears to anticipate the onset of psychiatric disorders like schizophrenia surprisingly well. But since schizophrenia is notoriously difficult for physicians to predict, Dudley wondered how this was possible. He still doesn’t know. The new tool offers no clue as to how it does this. If something like Deep Patient is actually going to help doctors, it will ideally give them the rationale for its prediction, to reassure them that it is accurate and to justify, say, a change in the drugs someone is being prescribed. “We can build these models,” Dudley says ruefully, “but we don’t know how they work.”</p>
+
+		<p>Artificial intelligence hasn’t always been this way. From the outset, there were two schools of thought regarding how understandable, or explainable, AI ought to be. Many thought it made the most sense to build machines that reasoned according to rules and logic, making their inner workings transparent to anyone who cared to examine some code. Others felt that intelligence would more easily emerge if machines took inspiration from biology, and learned by observing and experiencing. This meant turning computer programming on its head. Instead of a programmer writing the commands to solve a problem, the program generates its own algorithm based on example data and a desired output. The machine-learning techniques that would later evolve into today’s most powerful AI systems followed the latter path: the machine essentially programs itself.</p>
+
+		<p>At first this approach was of limited practical use, and in the 1960s and ’70s it remained largely confined to the fringes of the field. Then the computerization of many industries and the emergence of large data sets renewed interest. That inspired the development of more powerful machine-learning techniques, especially new versions of one known as the artificial neural network. By the 1990s, neural networks could automatically digitize<a href="https://www.technologyreview.com/s/540001/teaching-machines-to-understand-us/"> handwritten characters</a>.</p>
+
+		<p>But it was not until the start of this decade, after several clever tweaks and refinements, that very large—or “deep”—neural networks demonstrated dramatic improvements in automated perception. Deep learning is responsible for today’s explosion of AI. It has given computers extraordinary powers, like the ability to recognize spoken words almost as well as a person could, a skill too complex to code into the machine by hand. Deep learning has transformed computer vision and dramatically improved machine translation. It is now being used to guide all sorts of key decisions in medicine, finance, manufacturing—and beyond.</p>
+
+		
+
+
+	
+
+
+<figure class="l-article-img l-article-img--8col"
+	data-widget-type="imageset"
+	data-widget-layout="8col">
+
+	
+
+	
+		
+
+		
+			
+
+
+<picture
+	class="article-img article-img--8col "
+	
+	data-iesrc="https://cdn.technologyreview.com/i/images/mj17-aiblackbox2b.jpg?sw=1080&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999"
+	
+>
+			
+				<source
+					media="(min-width: 1024px)"
+					srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox2b.jpg?sw=1080&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999 1x,https://cdn.technologyreview.com/i/images/mj17-aiblackbox2b.jpg?sw=2160&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999 2x"
+				>
+			
+		
+			
+				<source
+					media="(min-width: 850px)"
+					srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox2b.jpg?sw=1024&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999 1x,https://cdn.technologyreview.com/i/images/mj17-aiblackbox2b.jpg?sw=2048&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999 2x"
+				>
+			
+		
+			
+				<source
+					media="(min-width: 550px)"
+					srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox2b.jpg?sw=850&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999 1x,https://cdn.technologyreview.com/i/images/mj17-aiblackbox2b.jpg?sw=1700&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999 2x"
+				>
+			
+				<source
+					media="(min-width: 401px)"
+					srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox2b.jpg?sw=550&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999 1x,https://cdn.technologyreview.com/i/images/mj17-aiblackbox2b.jpg?sw=1100&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999 2x"
+				>
+			
+		
+			
+				<source
+					media="(min-width: 0px)"
+					srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox2b.jpg?sw=401&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999 1x,https://cdn.technologyreview.com/i/images/mj17-aiblackbox2b.jpg?sw=802&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999 2x"
+				>
+			
+		
+
+		
+			<img
+				class="article-img article-img--8col"
+				src="https://cdn.technologyreview.com/i/images/mj17-aiblackbox2b.jpg?sw=1080&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999"
+				srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox2b.jpg?sw=1080&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999 1x,https://cdn.technologyreview.com/i/images/mj17-aiblackbox2b.jpg?sw=2160&amp;cx=0&amp;cy=0&amp;cw=1544&amp;ch=1999 2x"
+				
+			>
+			<div class="article-enlarge"></div></picture>
+
+		
+
+		
+
+	
+
+	
+		<figcaption class="article-cap article-cap--8col">
+			
+			
+			<div class="article-illustration">Adam Ferriss</div>
+			
+		</figcaption>
+		
+</figure>
+
+
+		<p>The workings of any machine-learning technology are inherently more opaque, even to computer scientists, than a hand-coded system. This is not to say that all future AI techniques will be equally unknowable. But by its nature, deep learning is a particularly dark black box.</p>
+
+		<p>You can’t just look inside a deep neural network to see how it works. A network’s reasoning is embedded in the behavior of thousands of simulated neurons, arranged into dozens or even hundreds of intricately interconnected layers. The neurons in the first layer each receive an input, like the intensity of a pixel in an image, and then perform a calculation before outputting a new signal. These outputs are fed, in a complex web, to the neurons in the next layer, and so on, until an overall output is produced. Plus, there is a process known as back-propagation that tweaks the calculations of individual neurons in a way that lets the network learn to produce a desired output.</p>
+
+		<p>The many layers in a deep network enable it to recognize things at different levels of abstraction. In a system designed to recognize dogs, for instance, the lower layers recognize simple things like outlines or color; higher layers recognize more complex stuff like fur or eyes; and the topmost layer identifies it all as a dog. The same approach can be applied, roughly speaking, to other inputs that lead a machine to teach itself: the sounds that make up words in speech, the letters and words that create sentences in text, or the steering-wheel movements required for driving.</p>
+
+		<aside class="l-pullquote--3col
+				 pullquote-style--default
+				 pullquote-size--large" 
+		data-widget-type="quote" 
+		data-widget-layout="3col">
+
+	<p class="pullquote__text pullquote__text--quote">“It might be part of the nature of intelligence that only part of it is exposed to rational explanation. Some of it is just instinctual.”</p>
+	
+</aside>
+
+
+		<p>Ingenious strategies have been used to try to capture and thus explain in more detail what’s happening in such systems. In 2015, researchers at Google modified a deep-learning-based image recognition algorithm so that instead of spotting objects in photos, it would generate or modify them. By effectively running the algorithm in reverse, they could discover the features the program uses to recognize, say, a bird or building. The <a href="https://photos.google.com/share/AF1QipPX0SCl7OzWilt9LnuQliattX4OUCj_8EP65_cTVnBmS1jnYgsGQAieQUc1VQWdgQ?key=aVBxWjhwSzg2RjJWLWRuVFBBZEN1d205bUdEMnhB">resulting images</a>, produced by a project known as Deep Dream, showed grotesque, alien-like animals emerging from clouds and plants, and hallucinatory pagodas blooming across forests and mountain ranges. The images proved that deep learning need not be entirely inscrutable; they revealed that the algorithms home in on familiar visual features like a bird’s beak or feathers. But the images also hinted at how different deep learning is from human perception, in that it might make something out of an artifact that we would know to ignore. Google researchers noted that when its algorithm generated images of a dumbbell, it also generated a human arm holding it. The machine had concluded that an arm was part of the thing.</p>
+
+		<p>Further progress has been made using ideas borrowed from neuroscience and cognitive science. A team led by Jeff Clune, an assistant professor at the University of Wyoming, has employed the AI equivalent of optical illusions to test deep neural networks. In 2015, Clune’s group showed how certain images could fool such a network into perceiving things that aren’t there, because the images exploit the low-level patterns the system searches for. One of Clune’s collaborators, Jason Yosinski, also built a tool that acts like a probe stuck into a brain. His tool targets any neuron in the middle of the network and searches for the image that activates it the most. The images that turn up are abstract (imagine an impressionistic take on a flamingo or a school bus), highlighting the mysterious nature of the machine’s perceptual abilities.</p>
+
+		
+
+
+	
+
+
+<figure class="l-article-img l-article-img--left-col"
+	data-widget-type="imageset"
+	data-widget-layout="left-col">
+
+	
+
+	
+		
+
+		
+			
+
+
+<picture
+	class="article-img article-img--left-col "
+	
+	data-iesrc="https://cdn.technologyreview.com/i/images/mj17-aiblackbox13.jpg?sw=373&amp;cx=0&amp;cy=0&amp;cw=1408&amp;ch=1748"
+	
+>
+			
+				<source
+					media="(min-width: 1024px)"
+					srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox13.jpg?sw=373&amp;cx=0&amp;cy=0&amp;cw=1408&amp;ch=1748 1x,https://cdn.technologyreview.com/i/images/mj17-aiblackbox13.jpg?sw=746&amp;cx=0&amp;cy=0&amp;cw=1408&amp;ch=1748 2x"
+				>
+			
+		
+			
+				<source
+					media="(min-width: 850px)"
+					srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox13.jpg?sw=1024&amp;cx=0&amp;cy=0&amp;cw=1408&amp;ch=1748 1x,https://cdn.technologyreview.com/i/images/mj17-aiblackbox13.jpg?sw=2048&amp;cx=0&amp;cy=0&amp;cw=1408&amp;ch=1748 2x"
+				>
+			
+		
+			
+				<source
+					media="(min-width: 550px)"
+					srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox13.jpg?sw=850&amp;cx=0&amp;cy=0&amp;cw=1408&amp;ch=1748 1x,https://cdn.technologyreview.com/i/images/mj17-aiblackbox13.jpg?sw=1700&amp;cx=0&amp;cy=0&amp;cw=1408&amp;ch=1748 2x"
+				>
+			
+				<source
+					media="(min-width: 401px)"
+					srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox13.jpg?sw=550&amp;cx=0&amp;cy=0&amp;cw=1408&amp;ch=1748 1x,https://cdn.technologyreview.com/i/images/mj17-aiblackbox13.jpg?sw=1100&amp;cx=0&amp;cy=0&amp;cw=1408&amp;ch=1748 2x"
+				>
+			
+		
+			
+				<source
+					media="(min-width: 0px)"
+					srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox13.jpg?sw=401&amp;cx=0&amp;cy=0&amp;cw=1408&amp;ch=1748 1x,https://cdn.technologyreview.com/i/images/mj17-aiblackbox13.jpg?sw=802&amp;cx=0&amp;cy=0&amp;cw=1408&amp;ch=1748 2x"
+				>
+			
+		
+
+		
+			<img
+				class="article-img article-img--left-col"
+				src="https://cdn.technologyreview.com/i/images/mj17-aiblackbox13.jpg?sw=373&amp;cx=0&amp;cy=0&amp;cw=1408&amp;ch=1748"
+				srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox13.jpg?sw=373&amp;cx=0&amp;cy=0&amp;cw=1408&amp;ch=1748 1x,https://cdn.technologyreview.com/i/images/mj17-aiblackbox13.jpg?sw=746&amp;cx=0&amp;cy=0&amp;cw=1408&amp;ch=1748 2x"
+				
+			>
+			<div class="article-enlarge"></div></picture>
+
+		
+
+		
+
+	
+
+	
+		<figcaption class="article-cap article-cap--left-col">
+			
+			This early artificial neural network, at the Cornell Aeronautical Laboratory in Buffalo, New York, circa 1960, processed inputs from light sensors.
+			
+			
+		</figcaption>
+		
+</figure>
+
+
+		
+
+
+	
+
+
+<figure class="l-article-img l-article-img--text-col"
+	data-widget-type="imageset"
+	data-widget-layout="text-col">
+
+	
+
+	
+		
+
+		
+			
+	<picture class="video-wrapper">
+    <video autoplay loop muted playsinline src="https://cdn.technologyreview.com/v/files/aiblackboxgif1.mp4?sw=600" class="article-img article-img--text-col"></video>
+	</picture>
+
+		
+
+		
+
+	
+
+	
+		<figcaption class="article-cap article-cap--text-col">
+			
+			Ferriss was inspired to run Cornell's artificial neural network through Deep Dream, producing the images above and below.
+			
+			
+			<div class="article-illustration">Adam Ferriss</div>
+			
+		</figcaption>
+		
+</figure>
+
+
+		<p>We need more than a glimpse of AI’s thinking, however, and there is no easy solution. It is the interplay of calculations inside a deep neural network that is crucial to higher-level pattern recognition and complex decision-making, but those calculations are a quagmire of mathematical functions and variables. “If you had a very small neural network, you might be able to understand it,” Jaakkola says. “But once it becomes very large, and it has thousands of units per layer and maybe hundreds of layers, then it becomes quite un-understandable.”</p>
+
+		<p>In the office next to Jaakkola is Regina Barzilay, an MIT professor who is determined to apply machine learning to medicine. She was diagnosed with breast cancer a couple of years ago, at age 43. The diagnosis was shocking in itself, but Barzilay was also dismayed that cutting-edge statistical and machine-learning methods were not being used to help with oncological research or to guide patient treatment. She says AI has huge potential to revolutionize medicine, but realizing that potential will mean going beyond just medical records. She envisions using more of the raw data that she says is currently underutilized: “imaging data, pathology data, all this information.”</p>
+
+		<aside class="l-pullquote--3col
+				 pullquote-style--default
+				 pullquote-size--large" 
+		data-widget-type="quote" 
+		data-widget-layout="3col">
+
+	<p class="pullquote__text pullquote__text--quote">How well can we get along with machines that
+are unpredictable and inscrutable?</p>
+	
+</aside>
+
+
+		<p><span class="s1">After she finished cancer treatment last year, Barzilay and her students began working with doctors at Massachusetts General Hospital to develop a system capable of mining pathology reports to identify patients with specific clinical characteristics that researchers might want to study. However, Barzilay understood that the system would need to explain its reasoning. So, together with Jaakkola and a student, she added a step: the system extracts and highlights snippets of text that are representative of a pattern it has discovered. Barzilay and her students are also developing a deep-learning algorithm capable of finding early signs of breast cancer in mammogram images, and they aim to give this system some ability to explain its reasoning, too. “You really need to have a loop where the machine and the human collaborate,” -Barzilay says.</span></p>
+
+		<p><span class="s1">The U.S. military is pouring billions into projects that will use machine learning to pilot vehicles and aircraft, identify targets, and help analysts sift through huge piles of intelligence data. Here more than anywhere else, even more than in medicine, there is little room for algorithmic mystery, and the Department of Defense has identified explainability as a key stumbling block. </span></p>
+
+		
+
+<div class="l-automated-trending--ordered" data-widget-type="automated-trending" data-widget-layout="ordered">
+	
+	<h5 class="automated-trending__h">Recommended for You</h5>
+	
+	<ol class="automated-trending__tz-list">
+		
+			
+				<li class="automated-trending--ordered__tz">
+					<div class="automated-trending--ordered__tz__hgroup">
+						<a href="/the-download/611583/this-robot-is-not-throwing-away-its-shot/" class="automated-trending--ordered__tz__story-link" data-event-category="recirculation" data-event-action="click" data-event-label="popular-list-right-rail">This robot is not throwing away its shot</a>
+					</div>
+				</li>
+			
+		
+			
+				<li class="automated-trending--ordered__tz">
+					<div class="automated-trending--ordered__tz__hgroup">
+						<a href="/s/611489/lets-make-private-data-into-a-public-good/" class="automated-trending--ordered__tz__story-link" data-event-category="recirculation" data-event-action="click" data-event-label="popular-list-right-rail">Let’s make private data into a public good</a>
+					</div>
+				</li>
+			
+		
+			
+				<li class="automated-trending--ordered__tz">
+					<div class="automated-trending--ordered__tz__hgroup">
+						<a href="/the-download/611578/nasa-is-will-test-quieter-supersonic-booms-over-texas-this-year/" class="automated-trending--ordered__tz__story-link" data-event-category="recirculation" data-event-action="click" data-event-label="popular-list-right-rail">NASA will test quieter supersonic booms over Texas this year</a>
+					</div>
+				</li>
+			
+		
+			
+				<li class="automated-trending--ordered__tz">
+					<div class="automated-trending--ordered__tz__hgroup">
+						<a href="/s/611424/this-is-how-the-robot-uprising-finally-begins/" class="automated-trending--ordered__tz__story-link" data-event-category="recirculation" data-event-action="click" data-event-label="popular-list-right-rail">This is how the robot uprising finally begins</a>
+					</div>
+				</li>
+			
+		
+			
+				<li class="automated-trending--ordered__tz">
+					<div class="automated-trending--ordered__tz__hgroup">
+						<a href="/s/611485/this-is-how-many-people-wed-have-to-send-to-proxima-centauri-to-make-sure-someone-actually/" class="automated-trending--ordered__tz__story-link" data-event-category="recirculation" data-event-action="click" data-event-label="popular-list-right-rail">This is how many people we’d have to send to Proxima Centauri to make sure someone actually arrives</a>
+					</div>
+				</li>
+			
+		
+	</ol>
+</div>
+
+
+
+		<p>David Gunning, a program manager at the Defense Advanced Research Projects Agency, is overseeing the aptly named Explainable Artificial Intelligence program. A silver-haired veteran of the agency who previously oversaw the DARPA project that eventually led to the creation of Siri, Gunning says automation is creeping into countless areas of the military. Intelligence analysts are testing machine learning as a way of identifying patterns in vast amounts of surveillance data. Many autonomous ground vehicles and aircraft are being developed and tested. But soldiers probably won’t feel comfortable in a robotic tank that doesn’t explain itself to them, and analysts will be reluctant to act on information without some reasoning. “It’s often the nature of these machine-learning systems that they produce a lot of false alarms, so an intel analyst really needs extra help to understand why a recommendation was made,” Gunning says.</p>
+
+		<p><span class="s1">This March, DARPA chose 13 projects from academia and industry for funding under Gunning’s program. Some of them could build on work led by Carlos Guestrin, a professor at the University of Washington. He and his colleagues have developed a way for machine-learning systems to provide a rationale for their outputs. Essentially, under this method a computer automatically finds a few examples from a data set and serves them up in a short explanation. A system designed to classify an e-mail message as coming from a terrorist, for example, might use many millions of messages in its training and decision-making. But using the Washington team’s approach, it could highlight certain keywords found in a message. Guestrin’s group has also devised ways for image recognition systems to hint at their reasoning by highlighting the parts of an image that were most significant. </span></p>
+
+		
+
+
+	
+
+
+<figure class="l-article-img l-article-img--text-col"
+	data-widget-type="imageset"
+	data-widget-layout="text-col">
+
+	
+
+	
+		
+
+		
+			
+	<picture class="video-wrapper">
+    <video autoplay loop muted playsinline src="https://cdn.technologyreview.com/v/files/aiblackboxgif2.mp4?sw=600" class="article-img article-img--text-col"></video>
+	</picture>
+
+		
+
+		
+
+	
+
+	
+		<figcaption class="article-cap article-cap--text-col">
+			
+			
+			<div class="article-illustration">Adam Ferriss</div>
+			
+		</figcaption>
+		
+</figure>
+
+
+		<p>One drawback to this approach and others like it, such as Barzilay’s, is that the explanations provided will always be simplified, meaning some vital information may be lost along the way. “We haven’t achieved the whole dream, which is where AI has a conversation with you, and it is able to explain,” says Guestrin. “We’re a long way from having truly interpretable AI.”</p>
+
+		<p>It doesn’t have to be a high-stakes situation like cancer diagnosis or military maneuvers for this to become an issue. Knowing AI’s reasoning is also going to be crucial if the technology is to become a common and useful part of our daily lives. Tom Gruber, who leads the Siri team at Apple, says explainability is a key consideration for his team as it tries to make Siri a smarter and more capable virtual assistant. Gruber wouldn’t discuss specific plans for Siri’s future, but it’s easy to imagine that if you receive a restaurant recommendation from Siri, you’ll want to know what the reasoning was. Ruslan Salakhutdinov, director of AI research at Apple and an associate professor at Carnegie Mellon University, sees explainability as the core of the evolving relationship between humans and intelligent machines. “It’s going to introduce trust,” he says.</p>
+
+		
+
+
+
+
+
+<div class="l-automated-related--single">
+    <div class="automated-related-heading">
+        <span class="automated-related-label">Read Next</span>
+    </div>
+
+    
+
+	
+    <a class="automated-related-picture" href="/s/602094/ais-language-problem/" data-event-category="recirculation" data-event-action="click" data-event-label="single-story-in-body">
+    
+
+
+<picture
+	class="automated-related-picture-img "
+	
+	data-iesrc="https://cdn.technologyreview.com/i/images/so16ai1.jpg?sw=180&amp;cx=0&amp;cy=50&amp;cw=1936&amp;ch=1089"
+	
+>
+			
+				<source
+					media="(min-width: 1024px)"
+					srcset="https://cdn.technologyreview.com/i/images/so16ai1.jpg?sw=180&amp;cx=0&amp;cy=50&amp;cw=1936&amp;ch=1089 1x,https://cdn.technologyreview.com/i/images/so16ai1.jpg?sw=360&amp;cx=0&amp;cy=50&amp;cw=1936&amp;ch=1089 2x"
+				>
+			
+		
+			
+				<source
+					media="(min-width: 850px)"
+					srcset="https://cdn.technologyreview.com/i/images/so16ai1.jpg?sw=1024&amp;cx=0&amp;cy=50&amp;cw=1936&amp;ch=1089 1x,https://cdn.technologyreview.com/i/images/so16ai1.jpg?sw=2048&amp;cx=0&amp;cy=50&amp;cw=1936&amp;ch=1089 2x"
+				>
+			
+		
+			
+				<source
+					media="(min-width: 550px)"
+					srcset="https://cdn.technologyreview.com/i/images/so16ai1.jpg?sw=850&amp;cx=0&amp;cy=50&amp;cw=1936&amp;ch=1089 1x,https://cdn.technologyreview.com/i/images/so16ai1.jpg?sw=1700&amp;cx=0&amp;cy=50&amp;cw=1936&amp;ch=1089 2x"
+				>
+			
+				<source
+					media="(min-width: 401px)"
+					srcset="https://cdn.technologyreview.com/i/images/so16ai1.jpg?sw=550&amp;cx=0&amp;cy=50&amp;cw=1936&amp;ch=1089 1x,https://cdn.technologyreview.com/i/images/so16ai1.jpg?sw=1100&amp;cx=0&amp;cy=50&amp;cw=1936&amp;ch=1089 2x"
+				>
+			
+		
+			
+				<source
+					media="(min-width: 0px)"
+					srcset="https://cdn.technologyreview.com/i/images/so16ai1.jpg?sw=401&amp;cx=0&amp;cy=50&amp;cw=1936&amp;ch=1089 1x,https://cdn.technologyreview.com/i/images/so16ai1.jpg?sw=802&amp;cx=0&amp;cy=50&amp;cw=1936&amp;ch=1089 2x"
+				>
+			
+		
+
+		
+			<img
+				class="automated-related-picture-img"
+				src="https://cdn.technologyreview.com/i/images/so16ai1.jpg?sw=180&amp;cx=0&amp;cy=50&amp;cw=1936&amp;ch=1089"
+				srcset="https://cdn.technologyreview.com/i/images/so16ai1.jpg?sw=180&amp;cx=0&amp;cy=50&amp;cw=1936&amp;ch=1089 1x,https://cdn.technologyreview.com/i/images/so16ai1.jpg?sw=360&amp;cx=0&amp;cy=50&amp;cw=1936&amp;ch=1089 2x"
+				
+			>
+			</picture>
+
+    </a>
+	
+
+    <a class="automated-related-link" href="/s/602094/ais-language-problem/" data-event-category="recirculation" data-event-action="click" data-event-label="single-story-in-body">AI’s Language Problem</a>
+    <div class="automated-related-dek" >Machines that truly understand language would be incredibly useful. But we don’t know how to build them.</div>
+
+    
+</div>
+
+
+
+
+		<p>Just as many aspects of human behavior are impossible to explain in detail, perhaps it won’t be possible for AI to explain everything it does. “Even if somebody can give you a reasonable-sounding explanation [for his or her actions], it probably is incomplete, and the same could very well be true for AI,” says Clune, of the University of Wyoming. “It might just be part of the nature of intelligence that only part of it is exposed&nbsp;to rational explanation. Some of it is just instinctual, or subconscious, or inscrutable.”</p>
+
+		<p><span class="s1">If that’s so, then at some stage we may have to simply trust AI’s judgment or do without using it. Likewise, that judgment will have to incorporate social intelligence. Just as society is built upon a contract of expected behavior, we will need to design AI systems to respect and fit with our social norms. If we are to create robot tanks and other killing machines, it is important that their decision-making be consistent with our ethical judgments. </span></p>
+
+		<p><span class="s1">To probe these metaphysical concepts, I went to Tufts University to meet with Daniel Dennett, a renowned philosopher and cognitive scientist who studies consciousness and the mind. A chapter of Dennett’s latest book, <em>From Bacteria to Bach and Back</em>, an encyclopedic treatise on consciousness, suggests that a natural part of the evolution of intelligence itself is the creation of systems capable of performing tasks their creators do not know how to do. “The question is, what accommodations do we have to make to do this wisely—what standards do we demand of them, and of ourselves?” he tells me in his cluttered office on the university’s idyllic campus. </span></p>
+
+		<p><span class="s1">He also has a word of warning about the quest for explainability. “I think by all means if&nbsp;we’re going to use these things and rely on them, then let’s get as firm a grip on how and why they’re giving us the answers as possible,” he says. But since there may be no perfect answer, we should be as cautious of AI explanations as we are of each other’s—no matter how clever a machine seems.&nbsp;“If it can’t do better than us at explaining what it’s doing,” he says, “then don’t trust&nbsp;it.” </span></p>
+	
+		<div class="callout--tagged-event-promo" desc="in-story-promo-emtech-reg">
+			<p class="callout__copy">Keep up with the latest in artificial intelligence at EmTech MIT.<br>Discover where tech, business, and culture converge.<br><br>September 11-14, 2018<br>MIT Media Lab</p>
+			
+			<a href="https://events.technologyreview.com/emtech/18?utm_medium=onsite_display&amp;utm_source=marketing&amp;utm_campaign=emtech_mit&amp;utm_content=instory_ad#section-register" class="callout__link" data-event-category="promoTracking" data-event-action="click" data-event-label="in-story-promo-emtech-reg">Register now <span class="callout__cta-icon"></span></a><br>
+			
+		</div>
+	
+</div>
+
+<div class="article-enlarge__modal">
+
+
+
+
+
+<!-- Widget: Slideshow -->
+<div data-widget-type="slideshow" class="article-img-enlarge-gallery-container swiper-container">
+	<div class="swiper-wrapper-outer">
+		<div class="article-img-enlarge-gallery-wrapper swiper-wrapper">
+
+
+	
+
+
+
+
+
+
+
+<div class="swiper-slide">
+	<div class="swiper-slide__wrapper">
+		
+		<picture>
+			
+<source
+	media="(min-width: 850px)"
+	real-srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox1.jpg?cx=0&cy=351&cw=1563&ch=1207&sw=1180 1x, https://cdn.technologyreview.com/i/images/mj17-aiblackbox1.jpg?cx=0&cy=351&cw=1563&ch=1207&sw=2360 2x"
+/>
+
+			
+<source
+	media="(min-width: 550px)"
+	real-srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox1.jpg?cx=0&cy=351&cw=1563&ch=1207&sw=850 1x, https://cdn.technologyreview.com/i/images/mj17-aiblackbox1.jpg?cx=0&cy=351&cw=1563&ch=1207&sw=1700 2x"
+/>
+
+			
+<source
+	media="(min-width: 401px)"
+	real-srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox1.jpg?cx=0&cy=351&cw=1563&ch=1207&sw=550 1x, https://cdn.technologyreview.com/i/images/mj17-aiblackbox1.jpg?cx=0&cy=351&cw=1563&ch=1207&sw=1100 2x"
+/>
+
+			<img
+				class="article-img article-img--enlarge"
+				real-srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox1.jpg?sw=1563&cx=0&cy=351&cw=1563&ch=1207 1x, https://cdn.technologyreview.com/i/images/mj17-aiblackbox1.jpg?sw=1563&cx=0&cy=351&cw=1563&ch=1207 2x"
+ 				alt=""
+				real-src="https://cdn.technologyreview.com/i/images/mj17-aiblackbox1.jpg?sw=1563&cx=0&cy=351&cw=1563&ch=1207"
+			/>
+			<div class="enlarge-close"></div>
+		</picture>
+
+		
+
+		<figcaption class="article-cap">
+			</strong>
+			
+		</figcaption>
+	</div>
+</div>
+
+
+
+						
+
+
+	
+
+
+
+
+
+
+
+<div class="swiper-slide">
+	<div class="swiper-slide__wrapper">
+		
+		<picture>
+			
+<source
+	media="(min-width: 850px)"
+	real-srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox2.jpg?cx=0&cy=0&cw=1544&ch=1999&sw=1180 1x, https://cdn.technologyreview.com/i/images/mj17-aiblackbox2.jpg?cx=0&cy=0&cw=1544&ch=1999&sw=2360 2x"
+/>
+
+			
+<source
+	media="(min-width: 550px)"
+	real-srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox2.jpg?cx=0&cy=0&cw=1544&ch=1999&sw=850 1x, https://cdn.technologyreview.com/i/images/mj17-aiblackbox2.jpg?cx=0&cy=0&cw=1544&ch=1999&sw=1700 2x"
+/>
+
+			
+<source
+	media="(min-width: 401px)"
+	real-srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox2.jpg?cx=0&cy=0&cw=1544&ch=1999&sw=550 1x, https://cdn.technologyreview.com/i/images/mj17-aiblackbox2.jpg?cx=0&cy=0&cw=1544&ch=1999&sw=1100 2x"
+/>
+
+			<img
+				class="article-img article-img--enlarge"
+				real-srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox2.jpg?sw=1544&cx=0&cy=0&cw=1544&ch=1999 1x, https://cdn.technologyreview.com/i/images/mj17-aiblackbox2.jpg?sw=1544&cx=0&cy=0&cw=1544&ch=1999 2x"
+ 				alt=""
+				real-src="https://cdn.technologyreview.com/i/images/mj17-aiblackbox2.jpg?sw=1544&cx=0&cy=0&cw=1544&ch=1999"
+			/>
+			<div class="enlarge-close"></div>
+		</picture>
+
+		
+
+		<figcaption class="article-cap">
+			</strong>The artist Adam Ferriss created this image, and the one below, using Google Deep Dream, a program that adjusts an image to stimulate the pattern recognition capabilities of a deep neural network. The pictures were produced using a mid-level layer of the neural network.
+			
+			<div class="article-illustration">Adam Ferriss</div>
+			
+		</figcaption>
+	</div>
+</div>
+
+
+
+					
+						
+
+
+	
+
+
+
+
+
+
+
+<div class="swiper-slide">
+	<div class="swiper-slide__wrapper">
+		
+		<picture>
+			
+<source
+	media="(min-width: 850px)"
+	real-srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox2b.jpg?cx=0&cy=0&cw=1544&ch=1999&sw=1180 1x, https://cdn.technologyreview.com/i/images/mj17-aiblackbox2b.jpg?cx=0&cy=0&cw=1544&ch=1999&sw=2360 2x"
+/>
+
+			
+<source
+	media="(min-width: 550px)"
+	real-srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox2b.jpg?cx=0&cy=0&cw=1544&ch=1999&sw=850 1x, https://cdn.technologyreview.com/i/images/mj17-aiblackbox2b.jpg?cx=0&cy=0&cw=1544&ch=1999&sw=1700 2x"
+/>
+
+			
+<source
+	media="(min-width: 401px)"
+	real-srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox2b.jpg?cx=0&cy=0&cw=1544&ch=1999&sw=550 1x, https://cdn.technologyreview.com/i/images/mj17-aiblackbox2b.jpg?cx=0&cy=0&cw=1544&ch=1999&sw=1100 2x"
+/>
+
+			<img
+				class="article-img article-img--enlarge"
+				real-srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox2b.jpg?sw=1544&cx=0&cy=0&cw=1544&ch=1999 1x, https://cdn.technologyreview.com/i/images/mj17-aiblackbox2b.jpg?sw=1544&cx=0&cy=0&cw=1544&ch=1999 2x"
+ 				alt=""
+				real-src="https://cdn.technologyreview.com/i/images/mj17-aiblackbox2b.jpg?sw=1544&cx=0&cy=0&cw=1544&ch=1999"
+			/>
+			<div class="enlarge-close"></div>
+		</picture>
+
+		
+
+		<figcaption class="article-cap">
+			</strong>
+			
+			<div class="article-illustration">Adam Ferriss</div>
+			
+		</figcaption>
+	</div>
+</div>
+
+
+
+					
+						
+
+
+	
+
+
+
+
+
+
+
+<div class="swiper-slide">
+	<div class="swiper-slide__wrapper">
+		
+		<picture>
+			
+<source
+	media="(min-width: 850px)"
+	real-srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox13.jpg?cx=0&cy=0&cw=1408&ch=1748&sw=1180 1x, https://cdn.technologyreview.com/i/images/mj17-aiblackbox13.jpg?cx=0&cy=0&cw=1408&ch=1748&sw=2360 2x"
+/>
+
+			
+<source
+	media="(min-width: 550px)"
+	real-srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox13.jpg?cx=0&cy=0&cw=1408&ch=1748&sw=850 1x, https://cdn.technologyreview.com/i/images/mj17-aiblackbox13.jpg?cx=0&cy=0&cw=1408&ch=1748&sw=1700 2x"
+/>
+
+			
+<source
+	media="(min-width: 401px)"
+	real-srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox13.jpg?cx=0&cy=0&cw=1408&ch=1748&sw=550 1x, https://cdn.technologyreview.com/i/images/mj17-aiblackbox13.jpg?cx=0&cy=0&cw=1408&ch=1748&sw=1100 2x"
+/>
+
+			<img
+				class="article-img article-img--enlarge"
+				real-srcset="https://cdn.technologyreview.com/i/images/mj17-aiblackbox13.jpg?sw=1408&cx=0&cy=0&cw=1408&ch=1748 1x, https://cdn.technologyreview.com/i/images/mj17-aiblackbox13.jpg?sw=1408&cx=0&cy=0&cw=1408&ch=1748 2x"
+ 				alt=""
+				real-src="https://cdn.technologyreview.com/i/images/mj17-aiblackbox13.jpg?sw=1408&cx=0&cy=0&cw=1408&ch=1748"
+			/>
+			<div class="enlarge-close"></div>
+		</picture>
+
+		
+
+		<figcaption class="article-cap">
+			</strong>This early artificial neural network, at the Cornell Aeronautical Laboratory in Buffalo, New York, circa 1960, processed inputs from light sensors.
+			
+		</figcaption>
+	</div>
+</div>
+
+
+
+					
+						
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						
+
+
+
+
+
+
+
+
+
+
+
+
+					
+
+			
+
+			
+		</div>		
+	</div>
+	
+	<div class="enlarge-gallery-controls__container">
+		<button class="enlarge-gallery-swiper-button enlarge-gallery-swiper-button-prev"></button>
+		<div class="enlarge-gallery-swiper-index-back"><div class="enlarge-gallery-swiper-index-front"><div class="enlarge-swiper-pagination-fraction"></div></div></div>
+		<button class="enlarge-gallery-swiper-button enlarge-gallery-swiper-button-next"></button>
+	</div>
+</div><!-- // end [data-widget-type="slideshow"] --></div>
+
+
+	<footer class="article-footer">
+
+	
+	<div class="article-footer__ad">
+		<div class="adunit ad--square-only"
+	data-adunit="__site/__square-only"
+	data-size-mapping="footer"
+	data-active="false">
+</div>
+	</div>
+	
+
+	<div class="article-footer__main">
+		<div class="article-footer__group article-footer__terms">
+			<div class="sharing--footer">
+				<h3 class="article-footer__term-title">Share</h3>
+			
+<ul class="social-list addthis_toolbox" data-share-id="604087" addthis:url="https://www.technologyreview.com/s/604087/the-dark-secret-at-the-heart-of-ai/" addthis:title="There’s a big problem with AI: even its creators can’t explain how it works"><li class="disqus-container social-list__item">
+		<a href="#disqus_thread" class="scroll-to-comments social-list__comment-link">
+			<div class="disqus-comment-count" data-disqus-identifier="nid_604087"></div>
+		</a>
+	</li><li class="social-list__item">
+		<a href="#" class="social-list__link addthis_button_facebook" data-event-category="addthis-custom" data-event-action="click" data-event-label="facebook"><i class="ion-social-facebook"></i></a>
+	</li>
+	<li class="social-list__item">
+		<a href="#" class="social-list__link addthis_button_twitter" data-event-category="addthis-custom" data-event-action="click" data-event-label="twitter"><i class="ion-social-twitter"></i></a>
+	</li>
+	<li class="social-list__item">
+		<a href="#" class="social-list__link addthis_button_reddit" data-event-category="addthis-custom" data-event-action="click" data-event-label="reddit"><i class="ion-social-reddit"></i></a>
+	</li>
+	<li class="social-list__item">
+		<a href="#" class="social-list__link addthis_button_linkedin" data-event-category="addthis-custom" data-event-action="click" data-event-label="linkedin"><i class="ion-social-linkedin"></i></a>
+	</li>
+	<li class="social-list__item">
+		<a href="#" class="social-list__link addthis_button_whatsapp" data-event-category="addthis-custom" data-event-action="click" data-event-label="whatsapp"><i class="ion-social-whatsapp"></i></a>
+	</li>
+	<li class="social-list__item">
+		<a href="#" class="social-list__link addthis_button_email" data-event-category="addthis-custom" data-event-action="click" data-event-label="email"><i class="ion-ios-email"></i></a>
+	</li>
+	
+</ul>
+
+
+			</div>
+
+			
+			<div class="article-footer__taxonomy">
+				<h3 class="article-footer__term-title">Tagged</h3>
+				<p class="article-footer__term-text">
+					
+					<a href="/g/artificial-intelligence/" class="article-footer__term-link">artificial intelligence</a>, 
+					
+					<a href="/g/ai/" class="article-footer__term-link">AI</a>, 
+					
+					<a href="/g/machine-learning/" class="article-footer__term-link">machine learning</a>, 
+					
+					<a href="/g/deep-learning/" class="article-footer__term-link">deep learning</a>, 
+					
+					<a href="/g/algorithms/" class="article-footer__term-link">algorithms</a>
+					
+				</p>
+			</div>
+			
+
+			
+			<div class="article-footer__taxonomy">
+				<h3 class="article-footer__term-title">Credit</h3>
+				<p class="article-footer__term-text">Adam Ferriss; Frederic Lewis | Getty</p>
+			</div>
+			
+		</div><!-- // end .article-footer__terms -->
+
+		
+		<div class="article-footer__group article-footer__author">
+
+			
+			<div class="article-footer__author__portrait-mod">
+				<img class="article-footer__author__portrait" src="https://cdn.technologyreview.com/i/profiles/avatars/will_knight.png?sw=75" alt="Will Knight">
+			</div>
+			
+
+			<div class="article-footer__author__text article-footer__author__text-with-avatar">
+				<p class="article-footer__author__name"><a href="/profile/will-knight/">Will Knight</a> <span class="article-footer__author__title">Senior Editor, AI</span></p>
+				
+				<p class="article-footer__author_bio">Will Knight is <i>MIT Technology Review</i>’s Senior Editor for Artificial Intelligence. He covers the latest advances in AI and related fields, including machine learning, automated driving, and robotics. Will joined <i>MIT Technology Review</i> in<span class="truncate__trigger">&hellip; <a href="#" data-truncate="trigger">More</a></span><span data-truncate="extended" class="truncate__extended"> 2008 from the UK science weekly <i>New Scientist</i> magazine.</span></p>
+				
+			</div>
+		</div><!-- // end .article-footer__author -->
+		<div class="l-load-comments-btn">
+			<a class="load-comments-btn" href="#" alt="Toggle showing or hidding comments.">
+				READ <span class="disqus-comment-count" data-disqus-identifier="nid_604087"></span> COMMENTS
+			</a>
+			<p class="commenting-guidelines">
+				Please read our <a href="/about/commenting-guidelines/">commenting guidelines.</a>
+			</p>
+		</div>
+		<div id="disqus_thread"></div>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<script id="dsq-count-scr" src="//technologyreview.disqus.com/count.js" defer></script></div><!-- // end .article-footer -->
+</footer>
+
+
+
+				</div>
+			</article>
+
+			<section class="paywall" class="entry-login container"></section>
+
+			<section class="l-fullwidth-interstitial-ad">
+				<div class="adunit ad--large"
+	data-adunit="__site/__fullwidth-interstitial"
+	data-size-mapping="fullwidth-interstitial"
+	data-active="false">
+</div>
+			</section>
+
+			<!-- Related Videos -->
+			
+
+<section class="l-related-videos">
+
+	<header class="related-videos__header">
+		<h3 class="related-videos__header__title">Related Video</h3>
+		<p class="related-videos__header__link"><a href="/videos/">More videos</a></p>
+	</header>
+
+	<div class="l-related-videos__container">
+	
+		
+		<div class="related-video">
+			
+			<a class="related-video__image-link" href="/video/611388/next-generation-robots-need-your-help/" data-event-category="relatedvideo" data-event-action="click" data-event-label="/video/611388/next-generation-robots-need-your-help/">
+				<div class="related-video__image-wrapper">
+					<span class="related-video__play-border">
+						<span class="related-video__play-button"></span>
+					</span>
+					
+
+
+<picture
+	class="related-video__image "
+	
+><img
+			class="related-video__image lozad"
+			data-src="https://cdn.technologyreview.com/i/ooyala/9vNGxpZjE6uP5yKk0Oko67ENRhMUn3Oc_0.jpg?sw=512"
+			data-srcset="https://cdn.technologyreview.com/i/ooyala/9vNGxpZjE6uP5yKk0Oko67ENRhMUn3Oc_0.jpg?sw=512 1x,https://cdn.technologyreview.com/i/ooyala/9vNGxpZjE6uP5yKk0Oko67ENRhMUn3Oc_0.jpg?sw=1024 2x"></picture>
+
+				</div>
+			</a>
+			
+			<p class="related-video__topic">
+				
+					Intelligent Machines
+				
+			</p>
+
+			<a href="/video/611388/next-generation-robots-need-your-help/"><div class="related-video__title" >Next-Generation Robots Need Your Help <span class="related-video__duration">27:36</span></div></a>
+		</div>
+		
+	
+		
+		<div class="related-video">
+			
+			<a class="related-video__image-link" href="/video/611363/ais-economic-impact/" data-event-category="relatedvideo" data-event-action="click" data-event-label="/video/611363/ais-economic-impact/">
+				<div class="related-video__image-wrapper">
+					<span class="related-video__play-border">
+						<span class="related-video__play-button"></span>
+					</span>
+					
+
+
+<picture
+	class="related-video__image "
+	
+><img
+			class="related-video__image lozad"
+			data-src="https://cdn.technologyreview.com/i/ooyala/11YXdoZjE67NZzq1FjTJXjxQ66Si5PyI_0.jpg?sw=512"
+			data-srcset="https://cdn.technologyreview.com/i/ooyala/11YXdoZjE67NZzq1FjTJXjxQ66Si5PyI_0.jpg?sw=512 1x,https://cdn.technologyreview.com/i/ooyala/11YXdoZjE67NZzq1FjTJXjxQ66Si5PyI_0.jpg?sw=1024 2x"></picture>
+
+				</div>
+			</a>
+			
+			<p class="related-video__topic">
+				
+					Intelligent Machines
+				
+			</p>
+
+			<a href="/video/611363/ais-economic-impact/"><div class="related-video__title" >AI&#039;s Economic Impact <span class="related-video__duration">35:20</span></div></a>
+		</div>
+		
+	
+		
+		<div class="related-video">
+			
+			<a class="related-video__image-link" href="/video/611361/autonomous-vehicles-and-urban-transportation/" data-event-category="relatedvideo" data-event-action="click" data-event-label="/video/611361/autonomous-vehicles-and-urban-transportation/">
+				<div class="related-video__image-wrapper">
+					<span class="related-video__play-border">
+						<span class="related-video__play-button"></span>
+					</span>
+					
+
+
+<picture
+	class="related-video__image "
+	
+><img
+			class="related-video__image lozad"
+			data-src="https://cdn.technologyreview.com/i/ooyala/NtdnZoZjE6hwjlZgsHvRI-tKnbMVyzP5.jpg?sw=512"
+			data-srcset="https://cdn.technologyreview.com/i/ooyala/NtdnZoZjE6hwjlZgsHvRI-tKnbMVyzP5.jpg?sw=512 1x,https://cdn.technologyreview.com/i/ooyala/NtdnZoZjE6hwjlZgsHvRI-tKnbMVyzP5.jpg?sw=1024 2x"></picture>
+
+				</div>
+			</a>
+			
+			<p class="related-video__topic">
+				
+					Intelligent Machines
+				
+			</p>
+
+			<a href="/video/611361/autonomous-vehicles-and-urban-transportation/"><div class="related-video__title" >Autonomous Vehicles and Urban Transportation <span class="related-video__duration">28:38</span></div></a>
+		</div>
+		
+	
+		
+		<div class="related-video">
+			
+			<a class="related-video__image-link" href="/video/611359/solving-the-manual-labor-shortage/" data-event-category="relatedvideo" data-event-action="click" data-event-label="/video/611359/solving-the-manual-labor-shortage/">
+				<div class="related-video__image-wrapper">
+					<span class="related-video__play-border">
+						<span class="related-video__play-button"></span>
+					</span>
+					
+
+
+<picture
+	class="related-video__image "
+	
+><img
+			class="related-video__image lozad"
+			data-src="https://cdn.technologyreview.com/i/ooyala/dyOXVoZjE6oahicvSV7QTn-CXBlX76kR_0.jpg?sw=512"
+			data-srcset="https://cdn.technologyreview.com/i/ooyala/dyOXVoZjE6oahicvSV7QTn-CXBlX76kR_0.jpg?sw=512 1x,https://cdn.technologyreview.com/i/ooyala/dyOXVoZjE6oahicvSV7QTn-CXBlX76kR_0.jpg?sw=1024 2x"></picture>
+
+				</div>
+			</a>
+			
+			<p class="related-video__topic">
+				
+					Intelligent Machines
+				
+			</p>
+
+			<a href="/video/611359/solving-the-manual-labor-shortage/"><div class="related-video__title" >Solving the Manual Labor Shortage <span class="related-video__duration">18:15</span></div></a>
+		</div>
+		
+	
+	</div>
+
+</section>
+
+
+
+			
+					<section class="">
+
+<div class="l-automated-trending-mobile--ordered">
+	
+	<h5 class="automated-trending__h">Recommended for You</h5>
+	
+	<ol class="automated-trending__tz-list">
+	
+		
+			<li class="automated-trending--ordered__tz">
+				<div class="automated-trending--ordered__tz__hgroup">
+					<a href="/the-download/611583/this-robot-is-not-throwing-away-its-shot/" class="automated-trending--ordered__tz__story-link" data-event-category="recirculation" data-event-action="click" data-event-label="readnext-list">This robot is not throwing away its shot</a>
+				</div>
+			</li>
+		
+	
+		
+			<li class="automated-trending--ordered__tz">
+				<div class="automated-trending--ordered__tz__hgroup">
+					<a href="/s/611489/lets-make-private-data-into-a-public-good/" class="automated-trending--ordered__tz__story-link" data-event-category="recirculation" data-event-action="click" data-event-label="readnext-list">Let’s make private data into a public good</a>
+				</div>
+			</li>
+		
+	
+		
+			<li class="automated-trending--ordered__tz">
+				<div class="automated-trending--ordered__tz__hgroup">
+					<a href="/the-download/611578/nasa-is-will-test-quieter-supersonic-booms-over-texas-this-year/" class="automated-trending--ordered__tz__story-link" data-event-category="recirculation" data-event-action="click" data-event-label="readnext-list">NASA will test quieter supersonic booms over Texas this year</a>
+				</div>
+			</li>
+		
+	
+		
+			<li class="automated-trending--ordered__tz">
+				<div class="automated-trending--ordered__tz__hgroup">
+					<a href="/s/611424/this-is-how-the-robot-uprising-finally-begins/" class="automated-trending--ordered__tz__story-link" data-event-category="recirculation" data-event-action="click" data-event-label="readnext-list">This is how the robot uprising finally begins</a>
+				</div>
+			</li>
+		
+	
+		
+			<li class="automated-trending--ordered__tz">
+				<div class="automated-trending--ordered__tz__hgroup">
+					<a href="/s/611485/this-is-how-many-people-wed-have-to-send-to-proxima-centauri-to-make-sure-someone-actually/" class="automated-trending--ordered__tz__story-link" data-event-category="recirculation" data-event-action="click" data-event-label="readnext-list">This is how many people we’d have to send to Proxima Centauri to make sure someone actually arrives</a>
+				</div>
+			</li>
+		
+	
+	</ol>
+</div>
+
+
+
+
+<section>
+				
+
+		</section>
+	</main>
+
+	<!-- Read More -->
+	
+
+<section class="rm" data-type="">
+
+	<header class="rm__header">
+
+		<div class="rm__header__heading">More from Intelligent Machines</div>
+		
+
+		
+		<p class="rm__header__subheading">Artificial intelligence and robots are transforming how we work and live.<p>
+		
+
+		
+
+	</header>
+
+	<ul class="rm__articles-list" data-entryset-value="">
+
+	
+		
+
+		<li class="rm__article rm__article--img">
+
+			<div class="rm__article__text">
+
+				<a href="/s/611539/google-demos-duplex-its-ai-that-sounds-exactly-like-a-very-weird-nice-human/" data-event-category="readnext" data-event-action="click" data-event-label="item_1" data-entryset-link><div class="rm__article__text__title" >Google demos Duplex, its AI that sounds exactly like a very weird, nice human</div></a>
+
+				<p class="rm__article__text__dek">After ethical concerns marred its announcement in May, Google showed off its retooled aural AI that helps you connect with people who still answer the phone.</p>
+
+				
+				<p class="rm__article__text__byline">by 
+	
+		
+			Rachel Metz
+		
+	
+</p>
+				
+
+			</div>
+
+			
+			<div class="l-rm__article__thumbnail"><a href="/s/611539/google-demos-duplex-its-ai-that-sounds-exactly-like-a-very-weird-nice-human/" data-event-category="readnext" data-event-action="click" data-event-label="item_1" data-entryset-link>
+
+
+<picture
+	class="rm__article__thumbnail lozad"
+	
+	data-iesrc="https://cdn.technologyreview.com/i/images/googleduplex-01-01.png?sw=320&amp;cx=0&amp;cy=0&amp;cw=1600&amp;ch=900"
+	
+>
+			
+				<source
+					media="(min-width: 1024px)"
+					srcset="https://cdn.technologyreview.com/i/images/googleduplex-01-01.png?sw=320&amp;cx=0&amp;cy=0&amp;cw=1600&amp;ch=900 1x,https://cdn.technologyreview.com/i/images/googleduplex-01-01.png?sw=640&amp;cx=0&amp;cy=0&amp;cw=1600&amp;ch=900 2x"
+				>
+			
+		
+			
+				<source
+					media="(min-width: 850px)"
+					srcset="https://cdn.technologyreview.com/i/images/googleduplex-01-01.png?sw=320&amp;cx=0&amp;cy=0&amp;cw=1600&amp;ch=900 1x,https://cdn.technologyreview.com/i/images/googleduplex-01-01.png?sw=640&amp;cx=0&amp;cy=0&amp;cw=1600&amp;ch=900 2x"
+				>
+			
+		
+			
+				<source
+					media="(min-width: 550px)"
+					srcset="https://cdn.technologyreview.com/i/images/googleduplex-01-01.png?sw=320&amp;cx=0&amp;cy=0&amp;cw=1600&amp;ch=900 1x,https://cdn.technologyreview.com/i/images/googleduplex-01-01.png?sw=640&amp;cx=0&amp;cy=0&amp;cw=1600&amp;ch=900 2x"
+				>
+			
+				<source
+					media="(min-width: 401px)"
+					srcset="https://cdn.technologyreview.com/i/images/googleduplex-01-01.png?sw=320&amp;cx=0&amp;cy=0&amp;cw=1600&amp;ch=900 1x,https://cdn.technologyreview.com/i/images/googleduplex-01-01.png?sw=640&amp;cx=0&amp;cy=0&amp;cw=1600&amp;ch=900 2x"
+				>
+			
+		
+			
+				<source
+					media="(min-width: 0px)"
+					srcset="https://cdn.technologyreview.com/i/images/googleduplex-01-01.png?sw=320&amp;cx=0&amp;cy=0&amp;cw=1600&amp;ch=900 1x,https://cdn.technologyreview.com/i/images/googleduplex-01-01.png?sw=640&amp;cx=0&amp;cy=0&amp;cw=1600&amp;ch=900 2x"
+				>
+			
+		
+
+		</picture>
+</a></div>
+			
+		</li>
+
+	
+		
+
+		<li class="rm__article rm__article--img">
+
+			<div class="rm__article__text">
+
+				<a href="/s/611478/indias-mess-of-complexity-is-just-what-ai-needs/" data-event-category="readnext" data-event-action="click" data-event-label="item_2" data-entryset-link><div class="rm__article__text__title" >India’s mess of complexity is just what AI needs</div></a>
+
+				<p class="rm__article__text__dek">The country’s diversity of scripts, dialects, dress, and culture is a challenge that will make artificial intelligence more resilient.</p>
+
+				
+				<p class="rm__article__text__byline">by 
+	
+		
+			Varun Aggarwal
+		
+	
+</p>
+				
+
+			</div>
+
+			
+			<div class="l-rm__article__thumbnail"><a href="/s/611478/indias-mess-of-complexity-is-just-what-ai-needs/" data-event-category="readnext" data-event-action="click" data-event-label="item_2" data-entryset-link>
+
+
+<picture
+	class="rm__article__thumbnail lozad"
+	
+	data-iesrc="https://cdn.technologyreview.com/i/images/workingversions-el-09.png?sw=320&amp;cx=0&amp;cy=0&amp;cw=2268&amp;ch=1275"
+	
+>
+			
+				<source
+					media="(min-width: 1024px)"
+					srcset="https://cdn.technologyreview.com/i/images/workingversions-el-09.png?sw=320&amp;cx=0&amp;cy=0&amp;cw=2268&amp;ch=1275 1x,https://cdn.technologyreview.com/i/images/workingversions-el-09.png?sw=640&amp;cx=0&amp;cy=0&amp;cw=2268&amp;ch=1275 2x"
+				>
+			
+		
+			
+				<source
+					media="(min-width: 850px)"
+					srcset="https://cdn.technologyreview.com/i/images/workingversions-el-09.png?sw=320&amp;cx=0&amp;cy=0&amp;cw=2268&amp;ch=1275 1x,https://cdn.technologyreview.com/i/images/workingversions-el-09.png?sw=640&amp;cx=0&amp;cy=0&amp;cw=2268&amp;ch=1275 2x"
+				>
+			
+		
+			
+				<source
+					media="(min-width: 550px)"
+					srcset="https://cdn.technologyreview.com/i/images/workingversions-el-09.png?sw=320&amp;cx=0&amp;cy=0&amp;cw=2268&amp;ch=1275 1x,https://cdn.technologyreview.com/i/images/workingversions-el-09.png?sw=640&amp;cx=0&amp;cy=0&amp;cw=2268&amp;ch=1275 2x"
+				>
+			
+				<source
+					media="(min-width: 401px)"
+					srcset="https://cdn.technologyreview.com/i/images/workingversions-el-09.png?sw=320&amp;cx=0&amp;cy=0&amp;cw=2268&amp;ch=1275 1x,https://cdn.technologyreview.com/i/images/workingversions-el-09.png?sw=640&amp;cx=0&amp;cy=0&amp;cw=2268&amp;ch=1275 2x"
+				>
+			
+		
+			
+				<source
+					media="(min-width: 0px)"
+					srcset="https://cdn.technologyreview.com/i/images/workingversions-el-09.png?sw=320&amp;cx=0&amp;cy=0&amp;cw=2268&amp;ch=1275 1x,https://cdn.technologyreview.com/i/images/workingversions-el-09.png?sw=640&amp;cx=0&amp;cy=0&amp;cw=2268&amp;ch=1275 2x"
+				>
+			
+		
+
+		</picture>
+</a></div>
+			
+		</li>
+
+	
+		
+
+		<li class="rm__article rm__article--img">
+
+			<div class="rm__article__text">
+
+				<a href="/s/611420/phoenix-will-no-longer-be-phoenix-if-waymos-driverless-car-experiment-succeeds/" data-event-category="readnext" data-event-action="click" data-event-label="item_3" data-entryset-link><div class="rm__article__text__title" >Phoenix will no longer be Phoenix if Waymo’s driverless-car experiment succeeds</div></a>
+
+				<p class="rm__article__text__dek">Shared autonomous vehicles could transform American cities built around car ownership.</p>
+
+				
+				<p class="rm__article__text__byline">by 
+	
+		
+			Ed Finn
+		
+	
+</p>
+				
+
+			</div>
+
+			
+			<div class="l-rm__article__thumbnail"><a href="/s/611420/phoenix-will-no-longer-be-phoenix-if-waymos-driverless-car-experiment-succeeds/" data-event-category="readnext" data-event-action="click" data-event-label="item_3" data-entryset-link>
+
+
+<picture
+	class="rm__article__thumbnail lozad"
+	
+	data-iesrc="https://cdn.technologyreview.com/i/images/sullivan201805301447.jpg?sw=320&amp;cx=0&amp;cy=203&amp;cw=2700&amp;ch=1518"
+	
+>
+			
+				<source
+					media="(min-width: 1024px)"
+					srcset="https://cdn.technologyreview.com/i/images/sullivan201805301447.jpg?sw=320&amp;cx=0&amp;cy=203&amp;cw=2700&amp;ch=1518 1x,https://cdn.technologyreview.com/i/images/sullivan201805301447.jpg?sw=640&amp;cx=0&amp;cy=203&amp;cw=2700&amp;ch=1518 2x"
+				>
+			
+		
+			
+				<source
+					media="(min-width: 850px)"
+					srcset="https://cdn.technologyreview.com/i/images/sullivan201805301447.jpg?sw=320&amp;cx=0&amp;cy=203&amp;cw=2700&amp;ch=1518 1x,https://cdn.technologyreview.com/i/images/sullivan201805301447.jpg?sw=640&amp;cx=0&amp;cy=203&amp;cw=2700&amp;ch=1518 2x"
+				>
+			
+		
+			
+				<source
+					media="(min-width: 550px)"
+					srcset="https://cdn.technologyreview.com/i/images/sullivan201805301447.jpg?sw=320&amp;cx=0&amp;cy=203&amp;cw=2700&amp;ch=1518 1x,https://cdn.technologyreview.com/i/images/sullivan201805301447.jpg?sw=640&amp;cx=0&amp;cy=203&amp;cw=2700&amp;ch=1518 2x"
+				>
+			
+				<source
+					media="(min-width: 401px)"
+					srcset="https://cdn.technologyreview.com/i/images/sullivan201805301447.jpg?sw=320&amp;cx=0&amp;cy=203&amp;cw=2700&amp;ch=1518 1x,https://cdn.technologyreview.com/i/images/sullivan201805301447.jpg?sw=640&amp;cx=0&amp;cy=203&amp;cw=2700&amp;ch=1518 2x"
+				>
+			
+		
+			
+				<source
+					media="(min-width: 0px)"
+					srcset="https://cdn.technologyreview.com/i/images/sullivan201805301447.jpg?sw=320&amp;cx=0&amp;cy=203&amp;cw=2700&amp;ch=1518 1x,https://cdn.technologyreview.com/i/images/sullivan201805301447.jpg?sw=640&amp;cx=0&amp;cy=203&amp;cw=2700&amp;ch=1518 2x"
+				>
+			
+		
+
+		</picture>
+</a></div>
+			
+		</li>
+
+	
+
+	</ul>
+
+	
+	
+	<footer class="rm__footer">
+		<p class="rm__footer__link"><a href="/topic/intelligent-machines/" data-event-category="readnext" data-event-action="click" data-event-label="more">More from Intelligent Machines</a></p>
+	</footer>
+	
+
+</section>
+
+
+
+
+	
+<aside class="article-sponsored-content-list">
+	<div class="article-sponsored-content-list__wrapper">
+		<div class="article-sponsored-content-list__title">From Our Advertisers</div>
+		<ul class="article-sponsored-content-list__list">
+			
+			<li class="article-sponsored-content-list__item">
+				<a href="https://www.technologyreview.com/leadgen/ibm-connected-operations/" class="article-sponsored-content-list__item__link" data-event-category="ad_sales" data-event-action="click" data-event-label="article_link_list">
+					
+					<p class="article-sponsored-content-list__item__sponsor">
+						
+							Presented by
+						
+						<strong class="article-sponsored-content-list__item__sponsor__name">IBM</strong>
+					</p>
+					
+					<div class="article-sponsored-content-list__item__hed">Optimizing Assets: Using AI to Rethink Maintenance and Repair</div>
+				</a>
+			</li>
+			
+			<li class="article-sponsored-content-list__item">
+				<a href="https://www.technologyreview.com/leadgen/cloud-development-the-key-to-rapid-innovation/" class="article-sponsored-content-list__item__link" data-event-category="ad_sales" data-event-action="click" data-event-label="article_link_list">
+					
+					<p class="article-sponsored-content-list__item__sponsor">
+						
+							In partnership with
+						
+						<strong class="article-sponsored-content-list__item__sponsor__name">Oracle</strong>
+					</p>
+					
+					<div class="article-sponsored-content-list__item__hed">Cloud Development: The Key to Rapid Innovation</div>
+				</a>
+			</li>
+			
+			<li class="article-sponsored-content-list__item">
+				<a href="https://www.technologyreview.com/leadgen/ibm-connected-products/" class="article-sponsored-content-list__item__link" data-event-category="ad_sales" data-event-action="click" data-event-label="article_link_list">
+					
+					<p class="article-sponsored-content-list__item__sponsor">
+						
+							Presented by
+						
+						<strong class="article-sponsored-content-list__item__sponsor__name">IBM</strong>
+					</p>
+					
+					<div class="article-sponsored-content-list__item__hed">Rapid Engineering Design Innovation for a Connected World</div>
+				</a>
+			</li>
+			
+		</ul>
+	</div>
+</aside>
+
+
+
+	
+		<!-- Insider promo -->
+		
+		
+		
+
+
+
+
+
+
+
+	
+	
+		
+	
+
+
+<div class="l-pricing l-pricing--menu-only" data-abtest-variant="plus">
+
+	
+
+	
+	<div class="pricing__heading">
+		Want more award-winning journalism?
+		
+			Subscribe to Insider Plus.
+		
+	</div>
+	
+
+	<div id="pricing">
+
+		
+
+		<div class="l-pricing__menu l-pricing__menu--menu-only">
+			<ul class="pricing__menu">
+				
+				
+					
+					<li class="pricing__menu__tier pricing__menu__tier--plus" data-tier="plus">
+						<div class="pricing__menu__tier__heading">
+							Insider Plus
+							<span class="pricing__menu__tier__price" data-onload="fadein">{! insider.prices.plus !}<span rv-if="insider.diffIntlPrice.plus">*</span></span>
+							
+						</div>
+						<p class="pricing__menu__tier__pricing-label" rv-show="insider.display.menuOptionsLabel" data-onload="fadein">
+							{! insider.display.menuOptionsLabel !}
+						</p>
+						<p class="pricing__menu__tier__description" data-onload="fadein">
+							Everything included in Insider Basic, plus the digital magazine, extensive archive, ad-free web experience, and discounts to partner offerings and MIT Technology Review events.
+						</p>
+
+						<div class="pricing__menu__tier__cta-block" data-onload="fadein">
+							<a rv-href="insider.buttons.plus.buttonURL" class="btn btn--primary--transparent pricing__menu__tier__cta" rv-class-btn--activated="insider.buttons.plus.buttonClassActivated" rv-class-btn--group-activated="insider.buttons.plus.buttonClassGroupActivated" data-event-category="story-footer-insider-promo" data-event-action="click" data-event-label="plus">{! insider.buttons.plus.buttonText !}<span class="btn--primary--transparent__icon">
+<svg class="btn__icon--angle-arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.1 10.1" enable-background="new 0 0 10.1 10.1" xml:space="preserve">
+	<polygon fill="#FFFFFF" points="0.9,0 0.9,2.5 5.9,2.5 0,8.4 1.8,10.1 7.6,4.3 7.6,9.2 10.1,9.2 10.1,0 "/>
+</svg>
+</span></a>
+						</div>
+
+						<div class="pricing__menu__tier__detail-toggle">See details+</div>
+
+						<div class="pricing__menu__tier__benefits">
+							
+								
+									<p class="pricing__menu__tier__benefit">
+										
+											Print + Digital Magazine (6 bi-monthly issues)
+										
+									</p>
+								
+							
+								
+									<p class="pricing__menu__tier__benefit">
+										
+											Unlimited online access including all articles, multimedia, and more
+										
+									</p>
+								
+							
+								
+									<p class="pricing__menu__tier__benefit">
+										
+											<strong>The Download</strong> newsletter with top tech stories delivered daily to your inbox
+										
+									</p>
+								
+							
+								
+									<p class="pricing__menu__tier__benefit">
+										
+											Technology Review PDF magazine archive, including articles, images, and covers dating back to 1899
+										
+									</p>
+								
+							
+								
+									<p class="pricing__menu__tier__benefit">
+										
+											10% Discount to MIT Technology Review events and MIT Press
+										
+									</p>
+								
+							
+								
+									<p class="pricing__menu__tier__benefit">
+										
+											Ad-free website experience
+										
+									</p>
+								
+							
+						</div>
+					</li>
+					
+				
+					
+				
+					
+				
+			</ul>
+
+			<div class="pricing__menu__options">
+				<p class="pricing__menu__options__label" data-onload="fadein">
+					<span class="asterisk">*</span>
+					{! insider.display.footerLabel !}
+				</p>
+				<p class="pricing__menu__option pricing__menu__option--shipping--us">
+					<a href="" data-action="updateShipping" data-shipping="intl" class="pricing__menu__option__link ">See international prices</a>
+				</p>
+				<p class="pricing__menu__option pricing__menu__option--shipping--intl">
+					<a href="" data-action="updateShipping" data-shipping="us" class="pricing__menu__option__link ">See U.S. prices</span></a>
+				</p>
+				<p class="pricing__menu__option pricing__menu__option--pricing--mitef">
+					<a href="" data-action="updatePricing" data-pricing="mitef" class="pricing__menu__option__link ">Revert to MIT Enterprise Forum pricing</a>
+				</p>
+				<p class="pricing__menu__option pricing__menu__option--pricing">
+					<a href="" data-action="updatePricing" data-pricing="standard" class="pricing__menu__option__link ">Revert to standard pricing</a>
+				</p>
+			</div>
+
+		</div>
+
+		
+
+	</div>
+
+
+	
+
+</div>
+
+	
+
+	<!-- Slider -->
+	
+		
+<div id="slider" class="l-adunit">
+	<div class="adunit ad--slider"
+		data-adunit="__site/__slider"
+		data-size-mapping="slider"
+		data-active="false">
+	</div>
+	<div id="slider-close">
+		<div class="slider-close-icon"></div>
+	</div>
+</div>
+
+	
+
+	<!-- Article Footer -->
+	
+<footer class="footer" >
+	<div class="footer-width">
+		
+		<div class="footer__newsletter-bar">
+			<form class="footer__newsletter-form" data-list-name="algorithm">
+				<label class="footer__newsletter-bar-text"><strong class="footer__newsletter-bar-text__download">The Algorithm</strong> News and views on the latest in artificial intelligence</label>
+        <div class="footer__newsletter-form-inputs">
+				  <input name="email" class="footer__newsletter-input" type="email" placeholder="Enter your email. Get the newsletter.">
+				  <input class="footer__newsletter-input__submit" type="submit" value="Sign Up">
+        </div>
+			  <p class="footer__newsletter-form-error">&nbsp;</p>
+			  <p class="footer__newsletter-form-policy">By signing up you agree to receive email newsletters and
+          notifications from MIT Technology Review. You can unsubscribe at any time. View our
+          <a href="/about/privacy/">Privacy Policy</a> for more details.
+        </p>
+			</form>
+			<div class="footer__social">
+				<p class="footer__newsletter-bar-text">Follow us</p>
+				<span class="footer__social-icons">
+					<a href="https://twitter.com/techreview"><span class="footer__social__text">Twitter</span><i class="footer__social--twitter"></i></a>
+					<a href="https://www.facebook.com/technologyreview"><span class="footer__social__text">Facebook</span><i class="footer__social--facebook"></i></a>
+					<a href="/rss/"><span class="footer__social__text">RSS</span><i class="footer__social--rss"></i></a>
+				</span>
+			</div>
+		</div>
+		
+	</div><!-- newsletter bar -->
+
+	<div class="footer__wrapper">
+		<div class="footer-width">
+
+			<div class="footer__header">
+				<div class="footer__icon"></div>
+				<div class="footer__intro">
+					<div class="footer__logo-mod">
+						<img class="footer__logo" src="https://cdn.technologyreview.com/_/img/horizontal-logo-v2--white.svg" alt="MIT Technology Review">
+					</div>
+					<p class="footer__intro__text">The mission of MIT Technology Review is to bring about better-informed and more conscious decisions about technology through authoritative, influential, and trustworthy journalism.</p>
+				</div>
+
+				<a href="/editions/" class="footer__international-editions">
+					<p class="footer__international-editions__text">Browse<br>International<br>Editions</p>
+					<span class="footer__international-editions__icon"></span>
+				</a>
+			</div><!-- footer-main header -->
+
+			<ul class="footer__subnav">
+				<li class="footer__subnav__list-title"><span class="footer__subnav__list-title-span">Company</span>
+				<ul class="footer__subnav__list">
+					<li class="footer__subnav__list-item"><a class="footer__subnav__list-item__link" href="/about/">About Us</a></li>
+					<li class="footer__subnav__list-item"><a class="footer__subnav__list-item__link" href="/careers/">Careers</a></li>
+					<li class="footer__subnav__list-item"><a class="footer__subnav__list-item__link" href="/media/">Advertise with Us</a></li>
+					<li class="footer__subnav__list-item"><a class="footer__subnav__list-item__link" href="https://www.technologyreview.com/s/603603/mit-technology-review-custom-content-showcase/">Insights</a></li>
+					<li class="footer__subnav__list-item"><a class="footer__subnav__list-item__link" href="/about/permissions/">Reuse, Permissions, and Licensing</a></li>
+					<li class="footer__subnav__list-item"><a class="footer__subnav__list-item__link" href="/press-room/">Press Room</a></li>
+				</ul>
+				</li>
+				<li class="footer__subnav__list-title"><span class="footer__subnav__list-title-span">Your Account</span>
+				<ul class="footer__subnav__list">
+					<li class="footer__subnav__list-item"><a class="footer__subnav__list-item__link" href="/login/" rel="nofollow">Log In / Create Account</a></li>
+					
+					<li class="footer__subnav__list-item"><a class="footer__subnav__list-item__link" href="/activate/" rel="nofollow">Activate Account</a></li>
+					
+					<li class="footer__subnav__list-item"><a class="footer__subnav__list-item__link" href="/newsletters/">Newsletters</a></li>
+					<li class="footer__subnav__list-item"><a class="footer__subnav__list-item__link" href="/account/" rel="nofollow">Manage Account</a></li>
+					
+					<li class="footer__subnav__list-item"><a class="footer__subnav__list-item__link" href="https://subscribe.technologyreview.com/ecom/mtr/app/live/subcustserv?pagemode=start&org=MTR&publ=TR&php=Y">Manage Subscription</a></li>
+					
+				</ul>
+				</li>
+				<li class="footer__subnav__list-title"><span class="footer__subnav__list-title-span">Customer Support</span>
+				<ul class="footer__subnav__list">
+					<li class="footer__subnav__list-item"><a class="footer__subnav__list-item__link" href="/help/">Help/FAQs</a></li>
+					<li class="footer__subnav__list-item"><a class="footer__subnav__list-item__link" href="/help/contact/">Contact Us</a></li>
+					<li class="footer__subnav__list-item"><a class="footer__subnav__list-item__link" href="/help/contact/">Feedback</a></li>
+					<li class="footer__subnav__list-item"><a class="footer__subnav__list-item__link" href="/sitemap/">Sitemap</a></li>
+				</ul>
+				</li>
+				<li class="footer__subnav__list-title"><span class="footer__subnav__list-title-span">More</span>
+				<ul class="footer__subnav__list">
+					<li class="footer__subnav__list-item"><a class="footer__subnav__list-item__link" href="/events/">Events</a></li>
+					<li class="footer__subnav__list-item"><a class="footer__subnav__list-item__link" href="http://www.mitef.org">MIT Enterprise Forum</a></li>
+					<li class="footer__subnav__list-item"><a class="footer__subnav__list-item__link" href="/mit-news/">MIT News</a></li>
+				</ul>
+				</li>
+				<li class="footer__subnav__list-title"><span class="footer__subnav__list-title-span">Policies</span>
+				<ul class="footer__subnav__list">
+					<li class="footer__subnav__list-item"><a class="footer__subnav__list-item__link" href="/about/ethics-statement/">Ethics Statement</a></li>
+					<li class="footer__subnav__list-item"><a class="footer__subnav__list-item__link" href="/about/terms-of-service/">Terms of Service</a></li>
+					<li class="footer__subnav__list-item"><a class="footer__subnav__list-item__link" href="/about/privacy/">Privacy</a></li>
+          <li class="footer__subnav__list-item"><a class="footer__subnav__list-item__link" href="/about/cookies/">Cookie Statement</a></li>
+					<li class="footer__subnav__list-item"><a class="footer__subnav__list-item__link" href="/about/commenting-guidelines/">Commenting Guidelines</a></li>
+				</ul>
+				</li>
+			</ul><!-- footer-main-navbar -->
+
+			<p class="footer-copyright">
+				<span class="footer-copyright--main"><a href="/about/terms-of-service/">MIT Technology Review &copy; 2018</a></span>
+				<span class="footer-version">v.|e<sup>i&pi;</sup>|</span>
+			</p>
+		</div><!-- footer wrapper -->
+	</div>
+</footer>
+
+
+	<!-- Reading Meter -->
+	<div class="meter" rv-show="meter.open">
+	<div class="meter__numbers">
+		<span rv-text="meter.usage"></span>/3</span>
+	</div>
+
+	<div class="meter__inner">
+		<div class="meter__copy">
+
+			<span rv-show="meter.visible">	
+				
+				<span rv-show="meter.loggedIn.1">
+					<span class="meter__copy__line">
+						You've read
+						<span rv-text="meter.usageWord"></span> of three
+						free articles this month. 
+						<a class="meter__subscribe__link" href="/insider/pricing/">Subscribe now</a> for unlimited online access.
+					</span>
+				</span>
+
+				<span rv-show="meter.loggedIn.2">
+					<span class="visibility--phablet">
+						You've read
+						<span rv-text="meter.usageWord"></span> of three
+						free articles this month. 
+					</span>
+					<span class="meter__copy__line">
+						<a class="meter__subscribe__link" href="/insider/pricing/">Subscribe now</a> for unlimited online access.
+					</span>
+				</span>
+
+				<span rv-show="meter.loggedIn.3">
+					<span class="visibility--phablet">
+						This is your last free article this month. 
+					</span>
+					<span class="meter__copy__line">
+						<a class="meter__subscribe__link" href="/insider/pricing/">Subscribe now</a> for unlimited online access.
+					</span>
+				</span>
+
+				<span rv-show="meter.loggedIn.3b">
+					<span class="visibility--phablet">
+						You've read all your free articles this month.
+					</span>
+					<span class="meter__copy__line">
+						<a class="meter__subscribe__link" href="/insider/pricing/">Subscribe now</a> for unlimited online access.
+					</span>
+				</span>				
+
+				<span rv-show="meter.loggedOut.1a">					
+					<span class="visibility--phablet">
+						You've read
+						<span rv-text="meter.usageWord"></span> of three
+						free articles this month. 
+					</span>
+					<span class="meter__copy__line">
+						<a class="meter__subscribe__link" href="/login/?redirectTo=%2Fs%2F604087%2Fthe-dark-secret-at-the-heart-of-ai%2F" rel="nofollow">Log in</a> for more, or <a class="meter__subscribe__link" href="/insider/pricing/">subscribe now</a> for unlimited online access.
+					</span>
+				</span>
+
+				<span rv-show="meter.loggedOut.1b">
+					<span class="meter__copy__line">
+						<a class="meter__subscribe__link" href="/login/?redirectTo=%2Fs%2F604087%2Fthe-dark-secret-at-the-heart-of-ai%2F" rel="nofollow">Log in</a> for two more free articles, or <a class="meter__subscribe__link" href="/insider/pricing/">subscribe now</a>						
+					</span>
+					<span class="visibility--phablet">
+						for unlimited online access.
+					</span>
+				</span>				
+
+			</span>
+		</div>
+
+		<a class="meter__toggle" onclick="model.meter.open = false"><span class="meter__close"></span></a>
+	</div>
+</div>
+
+
+	<!-- Group subscription bar -->
+	
+
+	
+
+
+
+
+<script>
+serverData = {"userData":{"tier":"","pricing":"","shipping":""},"prices":{"standard":{"online":{"us":"$9.99/3 months","intl":"$9.99/3 months"},"basic":{"us":"$29.95/year","intl":"$39.95/year"},"plus":{"us":"$79.95/year","intl":"$89.95/year"},"premium":{"us":"$179.95/year","intl":"$199.95/year"}},"alum":{"online":{"us":"Included in Basic","intl":"Included in Basic"},"basic":{"us":"Free","intl":"Free"},"plus":{"us":"$29.95/year","intl":"$39.95/year"},"premium":{"us":"$99.95/year","intl":"$119.95/year"}},"mitef":{"online":{"us":"Unavailable","intl":"Unavailable"},"basic":{"us":"$14.95/year","intl":"$19.95/year"},"plus":{"us":"$29.95/year","intl":"$39.95/year"},"premium":{"us":"$99.95/year","intl":"$119.95/year"}}},"insiderButtonCampaign":"insider_article_footer","articleData":{},"recaptchaSiteKey":"6Ld7EwoUAAAAAAsArADB7O-2iwPym46rsReGoEZd","env":{"label":"prod","rhinoUrl":"https://cms.technologyreview.com","cdnHost":"https://cdn.technologyreview.com","originHost":"https://www.technologyreview.com"},"url":"https://www.technologyreview.com/s/604087/the-dark-secret-at-the-heart-of-ai/","path":"/s/604087/the-dark-secret-at-the-heart-of-ai/","loginRedirectTo":"/s/604087/the-dark-secret-at-the-heart-of-ai/","debug":false,"analytics":{"dataLayer":{"Contributor":"Will Knight","PageType":"Featured Story","Pubdate":"2017-04-11","WordCount":"03200","DelayPageview":"true","EntryID":604087,"Topic":"Intelligent Machines","ABTestVariant":"topper"},"dfpTargeting":{"page_id":"tr_www_604087","channel":"computing","topic":"intelligent machines"}}};
+</script>
+
+
+
+<script src="https://cdn.technologyreview.com/_/dist/js/default.js?v=e2224133" defer></script>
+
+
+<!-- AddThis Config -->
+<script>
+addthis_config = {
+	data_track_addressbar: false,
+	data_track_clickback: false,
+	pubid: 'ra-4df12eda07a410ab',
+	ui_use_css : false,
+};
+addthis_share = {
+	passthrough : {
+		twitter: {
+			text: "There’s a big problem with AI: even its creators can’t explain how it works - via @techreview",
+		}
+	},
+	url_transforms: {
+		add: {
+			utm_campaign: 'social_button',
+			utm_source: '{{code}}',
+			utm_medium: 'social',
+			utm_content: '2018-07-03',
+		}
+	}
+};
+</script>
+
+<script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js#async=1" defer></script>
+
+
+<script src="https://cdn.technologyreview.com/_/dist/js/ArticleSubscriptionStump.js?v=e2224133" defer></script>
+
+<script src="https://cdn.technologyreview.com/_/dist/js/article.js?v=e2224133" defer></script><!-- Disqus Config -->
+<script id="disqus-config">
+	var disqus_config = function () {
+		
+		this.page.identifier = "nid_604087";
+		this.page.api_key = "XejkhkAhfJ7vBfgvQwYWaaztZ9oeooMbLept0qBFC5ILlWwwGbEieGlmOEXQUZs0";
+
+		this.sso = {
+			name: "MIT Technology Review",
+			button: "https://cdn.technologyreview.com/_/img/disqus-sso-login-button.png",
+			icon: "https://www.technologyreview.com/favicon.ico",
+			url: "https://www.technologyreview.com/login/?popup&redirectTo=%2Fs%2F604087%2Fthe-dark-secret-at-the-heart-of-ai%2F%23comments",
+			logout: "https://www.technologyreview.com/logout/?redirectTo=%2Fs%2F604087%2Fthe-dark-secret-at-the-heart-of-ai%2F%23comments",
+			width: "800",
+			height: "650"
+		};
+
+		this.callbacks.onNewComment = [function() {
+			window.dataLayer = window.dataLayer || [];
+			window.dataLayer.push({
+				event: 'disqus_comment',
+			});
+		}];
+	};
+</script>
+
+
+
+<!-- OneTrust Cookies Consent Notice (Production CDN, www.technologyreview.com, en-GB) start -->
+<script src="https://cdn.cookielaw.org/consent/36b3fe7d-bd78-41db-a00c-631914eb7291.js" type="text/javascript" charset="UTF-8" defer></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice (Production CDN, www.technologyreview.com, en-GB) end -->
+
+
+</body>
+</html>

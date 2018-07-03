@@ -1,0 +1,4 @@
+https://deepmind.com/research/dqn/
+https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf
+https://sites.google.com/a/deepmind.com/dqn/
+http://karpathy.github.io/2016/05/31/rl/
