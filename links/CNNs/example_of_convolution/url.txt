@@ -1,0 +1,2 @@
+http://deeplearning.stanford.edu/wiki/index.php/Feature_extraction_using_convolution
+https://d17h27t6h515a5.cloudfront.net/topher/2017/May/5913f852_convolution-schematic/convolution-schematic.gif
