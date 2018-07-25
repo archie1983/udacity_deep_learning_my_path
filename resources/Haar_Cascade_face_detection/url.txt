@@ -1,0 +1,3 @@
+https://pythonprogramming.net/haar-cascade-face-eye-detection-python-opencv-tutorial/
+http://ds.cs.ut.ee/Members/artjom85/2014dss-course-media/Object%20detection%20using%20Haar-final.pdf
+http://eyalarubas.com/face-detection-and-recognition.html
