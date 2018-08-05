@@ -1,0 +1,4 @@
+https://colah.github.io/posts/2015-08-Understanding-LSTMs/
+http://neuralnetworksanddeeplearning.com/chap3.html#how_to_choose_a_neural_network's_hyper-parameters
+http://www.deeplearningbook.org/contents/guidelines.html
+
