@@ -1,0 +1,5 @@
+https://arxiv.org/pdf/1511.06939.pdf
+http://www.cs.toronto.edu/~guerzhoy/321/lec/W09/rnn_gated.pdf
+http://colah.github.io/posts/2015-08-Understanding-LSTMs/
+http://blog.echen.me/2017/05/30/exploring-lstms/
+https://www.youtube.com/watch?v=iX5V1WpxxkY

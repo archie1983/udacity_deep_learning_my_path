@@ -1,0 +1,2 @@
+http://www.bioinf.jku.at/publications/older/2604.pdf
+https://skymind.ai/wiki/lstm
