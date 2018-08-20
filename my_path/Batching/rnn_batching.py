@@ -15,13 +15,11 @@ def get_batches(int_text, batch_size, seq_length):
     # AE: truncating the text to what we will be using
     usable_text = int_text[:(number_of_batches * batch_size * seq_length)]
 
-    batch_number = 0
-    
     # AE: First let's turn the usable text into some shape that resembles the required
     # AE: split into batches. We're skipping the second parameter in the reshape function
     # AE: of array because we're now only dealing with the inputs. We'll deal with
     # AE: the outputs later.
-    split_inputs = np.array(usable_text).reshape(number_of_batches, batch_size, seq_length)
+    split_inputs = np.array(usable_text).reshape((number_of_batches, batch_size, seq_length))
 
     # AE: We now have an almost correct split for the inputs, but not quite what was
     # AE: required in the task. For example this is what we get on the example input
@@ -68,17 +66,34 @@ def get_batches(int_text, batch_size, seq_length):
     # AE: But we really want to leave the 3rd dimension alone and treat it as a unitary element. So we only 
     # AE: want to transpose the first two dimensions. After some research it turns out that it is possible.
     # AE: by using text_splits_rs.transpose(1, 0, 2)
-    inputs = split_inputs.transpose(1, 0, 2).reshape(number_of_batches, batch_size, seq_length)
-    print("AE: ", inputs, " :AE")
+    print("DIMS: ", (number_of_batches, batch_size, seq_length))
+    print("SPLIT_INP: ", split_inputs, " : SPLIT_INP")
+    print("TRANSPOSE: ", split_inputs.transpose(1, 0, 2), " : TRANSPOSE")
+    # Extra manipulations
+    extra = split_inputs.transpose(1, 0, 2)
+    extra = np.flipud(np.fliplr(extra))
+    e0 = list(extra[0, 0])
+    el = list(extra[extra.shape[0] - 1, extra.shape[1] - 1])
+    print("E0, EL: ", e0, el, " : E0, EL")
+    extra[0, 0] = el
+    extra[extra.shape[0] - 1, extra.shape[1] - 1] = e0
+    print("EXTRA: ", extra, " : EXTRA", e0, el)
+    print("EXTRA_SHAPE: ", extra.shape, ": EXTRA_SHAPE")
+    extra_inputs = extra.reshape((number_of_batches, batch_size, seq_length))
+    print("EXTRA_INPUTS: ", extra_inputs, " :EXTRA_INPUTS")
+    # Extra manipulations done
+    #inputs = split_inputs.transpose(1, 0, 2).reshape((number_of_batches, batch_size, seq_length))
+    inputs = extra_inputs
+    print("INPUTS: ", inputs, " :INPUTS")
 
     # AE: Now we want to prepare targets (the same as <usable_text> only shifted to the right by 1)
-    print(usable_text)
+    #print(usable_text)
     usable_targets = usable_text[1:] + [usable_text[0]]
-    print(usable_targets)
+    #print(usable_targets)
     # AE: And now we organise this data into the correct shape just as before with the inputs:
-    split_targets = np.array(usable_targets).reshape(number_of_batches, batch_size, seq_length)
-    targets = split_targets.transpose(1, 0, 2).reshape(number_of_batches, batch_size, seq_length)
-    print("AE: ", targets, " :AE")
+    split_targets = np.array(usable_targets).reshape((number_of_batches, batch_size, seq_length))
+    targets = split_targets.transpose(1, 0, 2).reshape((number_of_batches, batch_size, seq_length))
+    #print("TARGETS: ", targets, " :TARGETS")
 
     # AE: Now we need to combine the inputs and targets into a unified data structure
 
@@ -93,6 +108,7 @@ def get_batches(int_text, batch_size, seq_length):
             final_data[nb, 1, bs] = targets[nb, bs]
 
     print("AE @ ", final_data, " @ AE")
+    #print("AE $ ", final_data.T, " $ AE")
     # text_splits = np.zeros((number_of_batches, batch_size * seq_length))
     # text_splits_sequenced = np.zeros((number_of_batches, batch_size))
     # split_n = 0
@@ -153,5 +169,6 @@ def get_batches(int_text, batch_size, seq_length):
     
     return final_data
 
-get_batches([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 3, 2)
-get_batches([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 4, 2)
+#get_batches([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 3, 2)
+#get_batches([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 4, 2)
+get_batches([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 2, 3)
