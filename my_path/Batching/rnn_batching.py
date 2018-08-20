@@ -1,3 +1,5 @@
+import numpy as np
+
 # AE: We need to create a batching function according to the task rules as in the TV script course project.
 # AE: Rules are outlined in rules.txt. This is where I try to achieve that.
 def get_batches(int_text, batch_size, seq_length):
@@ -12,8 +14,7 @@ def get_batches(int_text, batch_size, seq_length):
     number_of_batches = len(int_text) // (batch_size * seq_length)
     # AE: truncating the text to what we will be using
     usable_text = int_text[:(number_of_batches * batch_size * seq_length)]
-    
-    
+
     batch_number = 0
     
     # AE: First let's split the usable text into some shape that resembles the required
@@ -45,16 +46,27 @@ def get_batches(int_text, batch_size, seq_length):
     # Now let's iterate through batches and batch sizes and put the data where it belongs
     for nb in range(number_of_batches):
         for bs in range(batch_size):
+            None
             #final_data[nb, 0, bs] = split_inputs[bs % number_of_batches, 0, (nb % batch_size) + (bs // number_of_batches)]
 
     
-    
-    text_splits = np.array(number_of_batches)
+
+
+    text_splits = np.zeros((number_of_batches, batch_size * seq_length))
+    text_splits_sequenced = np.zeros((number_of_batches, batch_size))
     split_n = 0
     for ndx in range(0, len(usable_text), batch_size * seq_length):
+        #text_splits = np.array(usable_text[ndx:ndx + batch_size * seq_length])
+        #print(split_n, " : ", text_splits)
         text_splits[split_n] = np.array(usable_text[ndx:ndx + batch_size * seq_length])
+        
         split_n += 1
-    
+    print(text_splits)
+    text_splits_rs = text_splits.reshape(number_of_batches, batch_size, seq_length)
+    print(text_splits_rs)
+    print(text_splits_rs.transpose(1, 0, 2))
+    print(text_splits_rs.transpose(1, 0, 2).reshape(number_of_batches, batch_size, seq_length))
+    #print(text_splits.T)
     ## AE: We'll iterate through the whole text in batches. ndx will now be
     ## AE: iterating over a list with the start indexes for each batch
     #for ndx in range(0, len(usable_text), batch_size * seq_length):
@@ -95,3 +107,6 @@ def get_batches(int_text, batch_size, seq_length):
     #
     
     return None
+
+get_batches([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 3, 2)
+get_batches([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 4, 2)
