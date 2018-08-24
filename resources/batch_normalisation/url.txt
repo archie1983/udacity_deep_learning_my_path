@@ -1,2 +1,4 @@
 https://keras.io/layers/normalization/
 https://www.quora.com/Why-does-batch-normalization-help
+http://www.deeplearningbook.org/contents/optimization.html
+https://arxiv.org/pdf/1502.03167.pdf
