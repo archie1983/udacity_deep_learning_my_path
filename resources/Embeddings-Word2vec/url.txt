@@ -1,0 +1,5 @@
+http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/
+https://arxiv.org/pdf/1301.3781.pdf
+http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf
+http://www.thushv.com/natural_language_processing/word2vec-part-1-nlp-with-deep-learning-with-tensorflow-skip-gram/
+https://www.tensorflow.org/tutorials/word2vec
