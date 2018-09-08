@@ -1,3 +1,15 @@
 https://arxiv.org/pdf/1502.03167.pdf
 https://arxiv.org/pdf/1606.03498.pdf
 https://arxiv.org/pdf/1406.2661.pdf
+
+Wasserstein GAN:
+http://guimperarnau.com/blog/2017/03/Fantastic-GANs-and-where-to-find-them#wassGANs
+
+TFGAN:
+https://ai.googleblog.com/2017/12/tfgan-lightweight-library-for.html
+
+Beta1 parameter:
+http://ruder.io/optimizing-gradient-descent/index.html#adam
+
+Experiments with image generating GANs:
+https://devblogs.nvidia.com/photo-editing-generative-adversarial-networks-2/
