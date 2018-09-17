@@ -1,0 +1,13 @@
+https://deepmind.com/blog/producing-flexible-behaviours-simulated-environments/
+
+http://go.udacity.com/rl-textbook
+https://s3-us-west-1.amazonaws.com/udacity-drlnd/bookdraft2018.pdf
+
+http://selfdrivingcars.mit.edu/
+https://github.com/ucaiado/QLearning_Trading
+http://www.wildml.com/2018/02/introduction-to-learning-to-trade-with-reinforcement-learning/
+https://papers.nips.cc/paper/1740-low-power-wireless-communication-via-reinforcement-learning.pdf
+
+https://github.com/openai/gym.git
+https://blog.openai.com/openai-gym-beta/
+
