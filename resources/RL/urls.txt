@@ -11,3 +11,12 @@ https://papers.nips.cc/paper/1740-low-power-wireless-communication-via-reinforce
 https://github.com/openai/gym.git
 https://blog.openai.com/openai-gym-beta/
 
+https://deepmind.com/
+https://deepmind.com/blog/producing-flexible-behaviours-simulated-environments/
+https://www.youtube.com/watch?v=hx_bgoTF7bs&feature=youtu.be
+https://gym.openai.com/envs/CartPole-v0/
+https://github.com/openai/gym/wiki/CartPole-v0
+https://github.com/openai/gym/wiki/Table-of-environments
+https://gym.openai.com/docs/
+
+https://arxiv.org/pdf/1707.02286.pdf
