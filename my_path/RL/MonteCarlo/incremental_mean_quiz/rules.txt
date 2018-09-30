@@ -1,0 +1,6 @@
+Use the pseudocode to complete the running_mean function below. Your function should accept a list of numbers x as input. It should return a list mean_values, where mean_values[k] is the mean of x[:k+1].
+
+Note: Pay careful attention to indexing! Here, xkx_kxk​ corresponds to x[k-1] (so x1x_1x1​ = x[0], x2x_2x2​ = x[1], etc).
+
+Use the [ Test Run ] button to check the accuracy of your code. When you are ready to move on to the next concept, click on [ Submit Answer ].
+
