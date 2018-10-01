@@ -20,3 +20,4 @@ https://github.com/openai/gym/wiki/Table-of-environments
 https://gym.openai.com/docs/
 
 https://arxiv.org/pdf/1707.02286.pdf
+https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf
