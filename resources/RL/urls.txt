@@ -21,3 +21,4 @@ https://gym.openai.com/docs/
 
 https://arxiv.org/pdf/1707.02286.pdf
 https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.216.4144&rep=rep1&type=pdf
