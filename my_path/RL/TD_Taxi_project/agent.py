@@ -14,7 +14,7 @@ class Agent:
         self.Q = defaultdict(lambda: np.zeros(self.nA))
         
         # AE: alpha param for Q-learning
-        self.alpha = 0.01
+        self.alpha = 0.25
         
         # AE: epsilon param for Q-learning
         self.epsilon = 0.005
@@ -68,13 +68,13 @@ class Agent:
         best_greedy_action = np.argmax(Q[state])
 
         # AE: choosing epsilon to decay and protecting against division by 0
-        eps_thr = 5000
-        #if (self.episode_count < 10000):
-        #    epsilon = eps_thr / (eps_thr + self.episode_count)
-        #else:
-        #    epsilon = self.epsilon
+        eps_thr = 2000
+        if (self.episode_count < 14000):
+            epsilon = eps_thr / (eps_thr + self.episode_count)
+        else:
+            epsilon = self.epsilon
         #epsilon = 1.0 / (self.episode_count + 1)
-        epsilon = 0.1
+        #epsilon = 0.1
 
         for action_ndx, action in enumerate(possible_actions):
             if (action_ndx == best_greedy_action):
