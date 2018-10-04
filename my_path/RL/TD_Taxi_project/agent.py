@@ -14,7 +14,7 @@ class Agent:
         self.Q = defaultdict(lambda: np.zeros(self.nA))
         
         # AE: alpha param for Q-learning
-        self.alpha = 0.25
+        self.alpha = 0.1
         
         # AE: epsilon param for Q-learning
         self.epsilon = 0.005
@@ -51,7 +51,26 @@ class Agent:
         """
         #self.Q[state][action] += 1
         self.N[state][action] += 1
-        self.Q[state][action] += self.alpha * (reward + gamma * self.get_value_of_greedy_action(self.Q, next_state) - self.Q[state][action])
+        ega = self.get_epsilon_greedy_actions(self.Q, next_state)
+        nga = np.argmax(self.Q[next_state])
+        
+        # SARSA
+        #self.Q[state][action] += self.alpha * (reward + gamma * self.Q[next_state][nga] - self.Q[state][action])
+        
+        # Expected SARSA
+        #self.Q[state][action] += self.alpha * (reward + gamma * np.dot(ega, self.Q[next_state]) - self.Q[state][action])
+        
+        # SARSAMAX
+        #self.Q[state][action] += self.alpha * (reward + gamma * self.get_value_of_greedy_action(self.Q, next_state) - self.Q[state][action])
+        
+        if (self.episode_count < 17099):
+            # Expected SARSA
+            self.Q[state][action] += self.alpha * (reward + gamma * np.dot(ega, self.Q[next_state]) - self.Q[state][action])
+        else:
+            # SARSAMAX
+            self.Q[state][action] += self.alpha * (reward + gamma * self.get_value_of_greedy_action(self.Q, next_state) - self.Q[state][action])
+            
+        
         #self.Q[state][action] = (1 / self.N[state][action]) * (reward + gamma * self.get_value_of_greedy_action(self.Q, next_state) + self.Q[state][action] * self.N[state][action])
         
         if done == True:
@@ -69,12 +88,15 @@ class Agent:
 
         # AE: choosing epsilon to decay and protecting against division by 0
         eps_thr = 2000
-        if (self.episode_count < 14000):
+        if (self.episode_count < 17099):
             epsilon = eps_thr / (eps_thr + self.episode_count)
         else:
-            epsilon = self.epsilon
+            epsilon = 0#self.epsilon
         #epsilon = 1.0 / (self.episode_count + 1)
-        #epsilon = 0.1
+        #if (self.episode_count < 19500):
+        #    epsilon = 0.20
+        #else:
+        #    epsilon = 0;
 
         for action_ndx, action in enumerate(possible_actions):
             if (action_ndx == best_greedy_action):
