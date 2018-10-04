@@ -14,10 +14,10 @@ class Agent:
         self.Q = defaultdict(lambda: np.zeros(self.nA))
         
         # AE: alpha param for Q-learning
-        self.alpha = 0.1
+        self.alpha = 0.15
         
         # AE: epsilon param for Q-learning
-        self.epsilon = 0.005
+        self.epsilon = 0.0005
         
         self.episode_count = 0
         self.N = defaultdict(lambda: np.zeros(self.nA))
@@ -58,17 +58,17 @@ class Agent:
         #self.Q[state][action] += self.alpha * (reward + gamma * self.Q[next_state][nga] - self.Q[state][action])
         
         # Expected SARSA
-        #self.Q[state][action] += self.alpha * (reward + gamma * np.dot(ega, self.Q[next_state]) - self.Q[state][action])
+        self.Q[state][action] += self.alpha * (reward + gamma * np.dot(ega, self.Q[next_state]) - self.Q[state][action])
         
         # SARSAMAX
         #self.Q[state][action] += self.alpha * (reward + gamma * self.get_value_of_greedy_action(self.Q, next_state) - self.Q[state][action])
         
-        if (self.episode_count < 17099):
+        #if (self.episode_count < 17099):
             # Expected SARSA
-            self.Q[state][action] += self.alpha * (reward + gamma * np.dot(ega, self.Q[next_state]) - self.Q[state][action])
-        else:
+            #self.Q[state][action] += self.alpha * (reward + gamma * np.dot(ega, self.Q[next_state]) - self.Q[state][action])
+        #else:
             # SARSAMAX
-            self.Q[state][action] += self.alpha * (reward + gamma * self.get_value_of_greedy_action(self.Q, next_state) - self.Q[state][action])
+            #self.Q[state][action] += self.alpha * (reward + gamma * self.get_value_of_greedy_action(self.Q, next_state) - self.Q[state][action])
             
         
         #self.Q[state][action] = (1 / self.N[state][action]) * (reward + gamma * self.get_value_of_greedy_action(self.Q, next_state) + self.Q[state][action] * self.N[state][action])
@@ -91,7 +91,7 @@ class Agent:
         if (self.episode_count < 17099):
             epsilon = eps_thr / (eps_thr + self.episode_count)
         else:
-            epsilon = 0#self.epsilon
+            epsilon = self.epsilon
         #epsilon = 1.0 / (self.episode_count + 1)
         #if (self.episode_count < 19500):
         #    epsilon = 0.20
