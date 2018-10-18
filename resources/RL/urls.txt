@@ -41,3 +41,6 @@ https://arxiv.org/abs/1507.06527
 
 Hierarchical policies
 https://arxiv.org/pdf/cs/9905014.pdf
+
+CONTINUOUS CONTROL WITH DEEP REINFORCEMENT LEARNING:
+https://arxiv.org/pdf/1509.02971.pdf
