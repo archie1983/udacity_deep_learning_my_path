@@ -107,6 +107,16 @@ class Sigmoid(Node):
         Your code here!
         """
 
+    def forward(self):
+        """
+        Set the value of this node to the result of the
+        sigmoid function, `_sigmoid`.
+
+        Your code here!
+        """
+        # This is a dummy value to prevent numpy errors
+        # if you test without changing this method.
+        #self.value = -1
 
 """
 No need to change anything below here!
