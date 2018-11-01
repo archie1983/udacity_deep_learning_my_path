@@ -50,7 +50,7 @@ feed_dict = {
 epochs = 10
 # Total number of examples
 m = X_.shape[0]
-batch_size = 11
+batch_size = 11 #m
 steps_per_epoch = m // batch_size
 
 graph = topological_sort(feed_dict)
