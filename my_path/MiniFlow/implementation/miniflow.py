@@ -184,6 +184,11 @@ class Sigmoid(Node):
             in_node = self.inbound_nodes[0]
             self.gradients[in_node] = grad_cost * self._sigmoid(in_node.value) * (1 - self._sigmoid(in_node.value))
 
+	    ### Alternative solution:
+            #grad_cost = n.gradients[self]
+            #sigmoid = self.value
+            #self.gradients[self.inbound_nodes[0]] += sigmoid * (1 - sigmoid) * grad_cost
+
 class MSE(Node):
     def __init__(self, y, a):
         """
