@@ -147,7 +147,7 @@ class MSE(Node):
         y = self.inbound_nodes[0].value.reshape(-1, 1)
         a = self.inbound_nodes[1].value.reshape(-1, 1)
         # TODO: your code here
-        pass
+        self.value = np.sum(np.square(y - a)) / len(a)
 
 
 """
@@ -214,3 +214,12 @@ def forward_pass(output_node, sorted_nodes):
 
     return output_node.value
 
+def forward_pass(graph):
+    """
+    Performs a forward pass through a list of sorted Nodes.
+    Arguments:
+        `graph`: The result of calling `topological_sort`.
+    """
+    # Forward pass
+    for n in graph:
+        n.forward()
