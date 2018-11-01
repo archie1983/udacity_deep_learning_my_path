@@ -1,6 +1,4 @@
-"""
-You need to change the Add() class below.
-"""
+import numpy as np
 
 class Node(object):
     def __init__(self, inbound_nodes=[]):
@@ -61,6 +59,29 @@ class Add(Node):
         self.value = 0
         for node in self.inbound_nodes:
             self.value += node.value
+
+
+class Linear(Node):
+    def __init__(self, inputs, weights, bias):
+        Node.__init__(self, [inputs, weights, bias])
+
+        # NOTE: The weights and bias properties here are not
+        # numbers, but rather references to other nodes.
+        # The weight and bias values are stored within the
+        # respective nodes.
+
+    def forward(self):
+        """
+        Set self.value to the value of the linear function output.
+
+        Your code goes here!
+        """
+        inputs = self.inbound_nodes[0].value
+        weights = self.inbound_nodes[1].value
+        bias = self.inbound_nodes[2].value
+        self.value = np.dot(inputs, weights) + bias
+
+
 """
 No need to change anything below here!
 """
