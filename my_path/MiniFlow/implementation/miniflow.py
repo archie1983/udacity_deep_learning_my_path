@@ -179,6 +179,10 @@ class Sigmoid(Node):
 
             NOTE: See the Linear node and MSE node for examples.
             """
+            # AE: There should only be one outbound node and one inbound node
+            # Set the partial of the loss with respect to this node's inputs.
+            in_node = self.inbound_nodes[0]
+            self.gradients[in_node] = grad_cost * self._sigmoid(in_node.value) * (1 - self._sigmoid(in_node.value))
 
 class MSE(Node):
     def __init__(self, y, a):
