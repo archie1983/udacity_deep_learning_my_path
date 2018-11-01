@@ -58,8 +58,9 @@ class Add(Node):
 
         Your code here!
         """
-
-
+        self.value = 0
+        for node in self.inbound_nodes:
+            self.value += node.value
 """
 No need to change anything below here!
 """
