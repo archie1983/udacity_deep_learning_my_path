@@ -88,6 +88,26 @@ class Linear(Node):
         ### If inputs are batches of vectors (2d matrices) and weights are  2d matrices, then only the first solution will work
 
 
+class Sigmoid(Node):
+    """
+    You need to fix the `_sigmoid` and `forward` methods.
+    """
+    def __init__(self, node):
+        Node.__init__(self, [node])
+
+    def _sigmoid(self, x):
+        """
+        This method is separate from `forward` because it
+        will be used later with `backward` as well.
+
+        `x`: A numpy array-like object.
+
+        Return the result of the sigmoid function.
+
+        Your code here!
+        """
+
+
 """
 No need to change anything below here!
 """
