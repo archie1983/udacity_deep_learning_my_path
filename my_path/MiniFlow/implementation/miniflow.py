@@ -285,3 +285,20 @@ def forward_pass(graph):
     # Forward pass
     for n in graph:
         n.forward()
+
+def forward_and_backward(graph):
+    """
+    Performs a forward pass and a backward pass through a list of sorted Nodes.
+
+    Arguments:
+
+        `graph`: The result of calling `topological_sort`.
+    """
+    # Forward pass
+    for n in graph:
+        n.forward()
+
+    # Backward pass
+    # see: https://docs.python.org/2.3/whatsnew/section-slices.html
+    for n in graph[::-1]:
+        n.backward()
