@@ -106,6 +106,7 @@ class Sigmoid(Node):
 
         Your code here!
         """
+        return 1 / (1 + np.exp(-x))
 
     def forward(self):
         """
@@ -117,6 +118,8 @@ class Sigmoid(Node):
         # This is a dummy value to prevent numpy errors
         # if you test without changing this method.
         #self.value = -1
+        inbound_value = self.inbound_nodes[0].value # should be just one node inbound
+        self.value = self._sigmoid(inbound_value)
 
 """
 No need to change anything below here!
