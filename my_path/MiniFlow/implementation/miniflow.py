@@ -80,6 +80,10 @@ class Linear(Node):
         weights = self.inbound_nodes[1].value
         bias = self.inbound_nodes[2].value
         self.value = np.dot(inputs, weights) + bias
+  	# Alternative solution:
+        #self.value = bias.value
+        #for x, w in zip(inputs, weights):
+        #    self.value += x * w
 
 
 """
