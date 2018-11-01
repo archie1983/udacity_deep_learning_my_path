@@ -149,6 +149,10 @@ class MSE(Node):
         # TODO: your code here
         self.value = np.sum(np.square(y - a)) / len(a)
 
+	### Alternative solution:
+        #diff = y - a
+        #self.value = np.mean(diff**2)
+
 
 """
 No need to change anything below here!
