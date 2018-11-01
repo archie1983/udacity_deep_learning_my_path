@@ -210,6 +210,8 @@ class MSE(Node):
 	### Alternative solution:
         #diff = y - a
         #self.value = np.mean(diff**2)
+        self.diff = y - a
+        self.m = self.inbound_nodes[0].value.shape[0] # also len(a)
 
     def backward(self):
         """
